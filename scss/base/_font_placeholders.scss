@@ -1,0 +1,97 @@
+@use "root" as *;
+
+// Desktop
+
+%header_link_styles {
+    font-family: $descript_font;
+    font-size: $font_sm;
+    color: $primary_color;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: $clicking_cursor;
+}
+
+%h1_font {
+    font-family: $titles_font;
+    font-size: $font_xxl;
+    color: $primary_color;
+    text-transform: uppercase;
+}
+
+%h2_font_colored {
+    font-family: $titles_font;
+    font-size: $font_xxl;
+    color: $secondary_color;
+}
+
+%h2_font_white {
+    font-family: $titles_font;
+    font-size: $font_xxl;
+    color: $secondary_color;
+}
+
+%h3_font_white {
+    font-family: $titles_font;
+    font-size: $font_xl;
+    color: $primary_color;
+    line-height: $line_height;
+}
+
+%h3_font_colored {
+    font-family: $titles_font;
+    font-size: $font_xl;
+    color: $secondary_color;
+    line-height: $line_height;
+}
+
+%hero_descr_font {
+    font-family: $descript_font;
+    font-size: $font_hero;
+    color: $primary_color;
+    line-height: $line_height;
+}
+
+%h4_font_colored {
+    font-family: $titles_font;
+    font-size: $font_lg;
+    color: $secondary_color;
+    line-height: $line_height;
+}
+
+%h4_font_white {
+    font-family: $titles_font;
+    font-size: $font_lg;
+    color: $secondary_color;
+    line-height: $line_height;
+}
+
+%body_font_descr {
+    font-family: $descript_font;
+    font-size: $font_md;
+    color: $descript_font_color;
+    line-height: $line_height;
+}
+
+%body_font_white {
+    font-family: $descript_font;
+    font-size: $font_md;
+    color: $primary_color;
+    line-height: $line_height;
+}
+
+%body_font_colored {
+    font-family: $descript_font;
+    font-size: $font_md;
+    color: $primary_color;
+    line-height: $line_height;
+}
+
+%order_font {
+    font-family: $descript_font;
+    font-size: $font_xs;
+    color: $secondary_color;
+    line-height: $line_height;
+}
+
+// Mobile
+

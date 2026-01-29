@@ -1,0 +1,14 @@
+@use "../base/index";
+
+@mixin flex($direction:row, $justify:center, $align:center,$gap:0px) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin grid($columns: 1fr 1fr, $rows: repeat(2, auto)) {
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
