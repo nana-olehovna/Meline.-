@@ -31,3 +31,25 @@
     height: $no_padd_block_height;
 }
 
+%header_link_styles {
+    font-family: $descript_font;
+    font-size: $font_sm;
+    color: $primary_color;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: $clicking_cursor;
+}
+
+%headliners_font_style {
+    font-family: $titles_font;
+}
+
+%main_font_style {
+    font-family: $titles_font;
+    line-height: $line_height;
+}
+
+%body_font {
+    font-family: $descript_font;
+    line-height: $line_height;
+}

@@ -12,3 +12,28 @@
     grid-template-columns: $columns;
     grid-template-rows: $rows;
 }
+
+@mixin main_headliner($color:$primary_color, $size:$font_xxl) {
+    color: $color;
+    font-size: $size;
+}
+
+@mixin section_head($size:$font_xxl) {
+    font-size: $size;
+}
+
+@mixin section_description($color:$secondary_color, $size:$font_xl){
+    color: $color;
+    font-size: $size;
+}
+
+@mixin product_name($color:$secondary_color, $size:$font_lg) {
+    color: $color;
+    font-size: $size;
+}
+
+@mixin body_font($color:$secondary_color, $size:$font_md) {
+    color: $color;
+    font-size: $size;
+}
+
