@@ -1,0 +1,79 @@
+@use "../../base/root" as *;
+@use "../../mixins/index" as mix;
+@use "../../placeholders/index" as place;
+@use "../../media/index" as media;
+
+.popover_nav_menu_button {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    @include media.tablet{display: none;}
+    @include media.desktop{display: none;}
+}
+
+
+.popover_nav_menu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    &_content_window {
+        width: 100%;
+        height: 100%;
+        @include mix.flex($justify:space-between, $align:start);
+    }
+    &_content {
+        height: 100%;
+        width: 50%;
+        min-width: 240px;
+        background-color: $accent_color;
+        @include mix.flex($direction:column, $justify:space-between);
+        padding: 40px 20px;
+    }
+    &_content_bottom {
+        width: 100%;
+        @include mix.flex($direction:column, $justify:space-evenly, $gap:20px);
+    }
+    &_content_bottom_links {
+        @include mix.flex($gap:20px);
+        img {width: 16px; height: 16px; background: transparent;}
+    }
+    &_content_bottom_logo img{
+        width: 90px;
+    }
+    &_close_button {
+        background: transparent;
+        border: none;
+        margin: 20px;
+        cursor: $clicking_cursor;
+        img{width: 13px; height: 13px;}
+    }
+}
+
+.header_nav_list_mob {
+    min-width: 185px;
+    height: 60%;
+    @include mix.flex($direction:column, $justify:space-evenly, $align:start);
+    padding: 0 10px;
+}
+
+.header_nav_item_mob a {
+    font-family: $descript_font;
+    font-size: $font_lg;
+    color: $secondary_color;
+    text-decoration: none;
+    text-transform: lowercase;
+    cursor: $clicking_cursor;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:active {
+        text-decoration: underline;
+        color: $descript_font_color;
+    }
+}
+

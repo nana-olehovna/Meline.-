@@ -1,3 +1,5 @@
+@forward "header_mobile";
+
 @use "../../base/root" as *;
 @use "../../mixins/index" as mix;
 @use "../../placeholders/index" as place;
@@ -8,11 +10,14 @@
     height: 70px;
     background-color: $secondary_color;
     @include mix.flex();
+    @include media.mobile{justify-content: start;}
     &_nav_list {
         width: 80%;
-        @include mix.flex($justify:space-evenly, $gap:10px)
+        @include mix.flex($justify:space-evenly, $gap:10px);
+        @include media.mobile{display: none;}
     }
     &_nav_item a{
         @extend %header_link_styles
     }
 }
+
