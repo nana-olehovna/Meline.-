@@ -1,0 +1,62 @@
+@use "../base/root" as *;
+
+%button_styles{
+    width: 300px;
+    height: 60px;
+    border: none;
+    background-color: $secondary_color;
+    color: $primary_color;
+    font-size: $font_lg;
+    letter-spacing: $letter_spac;
+    font-family: $titles_font;
+    text-transform: uppercase;
+    cursor: $clicking_cursor;
+}
+
+%button_styles_mob{
+    width: 300px;
+    height: 60px;
+    border: none;
+    background-color: $secondary_color;
+    color: $primary_color;
+    font-size: $font_lg_mob;
+    letter-spacing: $letter_spac;
+    font-family: $titles_font;
+    text-transform: uppercase;
+    cursor: $clicking_cursor;
+}
+
+%no_padd_block {
+    width: 100%;
+    height: $no_padd_block_height;
+}
+
+%header_link_styles {
+    font-family: $descript_font;
+    font-size: $font_sm;
+    color: $primary_color;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: $clicking_cursor;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:active {
+        text-decoration: underline;
+        color: $descript_font_color;
+    }
+}
+
+%headliners_font_style {
+    font-family: $titles_font;
+}
+
+%main_font_style {
+    font-family: $titles_font;
+    line-height: $line_height;
+}
+
+%body_font {
+    font-family: $descript_font;
+    line-height: $line_height;
+}

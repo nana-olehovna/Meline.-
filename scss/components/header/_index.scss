@@ -1,0 +1,18 @@
+@use "../../base/root" as *;
+@use "../../mixins/index" as mix;
+@use "../../placeholders/index" as place;
+@use "../../media/index" as media;
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: $secondary_color;
+    @include mix.flex();
+    &_nav_list {
+        width: 80%;
+        @include mix.flex($justify:space-evenly, $gap:10px)
+    }
+    &_nav_item a{
+        @extend %header_link_styles
+    }
+}

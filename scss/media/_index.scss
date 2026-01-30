@@ -1,19 +1,2 @@
 @forward "media";
 
-@mixin monitor {
-    @media (min-width: 1920px) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (min-width: 430px) and (max-width: 768px) {
-        @content;
-    }
-}
-
-@mixin mobile {
-    @media (min-width: 320px) and (max-width: 430px) {
-        @content;
-    }
-}
