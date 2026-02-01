@@ -1,0 +1,54 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+.about_section_philosophy {
+    @extend %no_padd_block;
+    @include mix.flex();
+    background: url("../../../../images/About/item3.png");
+    @extend %bg_styles;
+}
+
+.philosophy_content_box {
+    width: 40%;
+    max-width: calc(100% - 30px);
+    height: 80%;
+    @include mix.flex($direction:column, $justify:space-between, $gap:20px);
+    &_headliner {
+        border: 1px solid $primary_color;
+        background-color: $accent_color;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        h3 {@include mix.product_name($color:$primary_color, $size:$font_xl)}
+    }
+    &_text {
+        position: relative;
+        flex: 1;
+        border: 1px solid rgba(237, 234, 244, 0.25);
+        width: 100%;
+        padding: 40px;
+        @include mix.flex($direction:column, $justify:space-between);
+        overflow: hidden;
+        .logo {width: 105px; height: 25px; z-index: 10;}
+        .line {z-index: 10;}
+        p {
+            @include mix.body_font($color:$primary_color);
+            text-align: center;
+            letter-spacing: $letter_spac;
+            font-weight: 200;
+            z-index: 10;
+        }
+    }
+}
+
+.philosophy_content_box_text::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+} 

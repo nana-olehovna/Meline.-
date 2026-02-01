@@ -17,6 +17,7 @@
 
 .hero_section_block {
     @extend %no_padd_block;
+    margin-top: 0;
     @include mix.flex($direction:column);
     background: url("../../../../images/Hero/hero.png");
     @extend %bg_styles;
