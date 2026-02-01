@@ -1,0 +1,46 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+.hero_section {
+    @include mix.flex($direction:column);
+    &_logo {
+        @include mix.flex;
+        img {
+            width: 110px;
+            height: 35px;
+            margin: 25px auto;
+        }
+    }
+}
+
+.hero_section_block {
+    @extend %no_padd_block;
+    @include mix.flex($direction:column);
+    background: url("../../../../images/Hero/hero.png");
+    @extend %bg_styles;
+    &_content {
+        @include mix.flex($direction:column, $gap: 30px);
+    }
+    &_content_top {
+        .main_headliner_primary {
+            @include mix.main_headliner();
+            margin-bottom: 16px;
+        }
+        .main_headliner_secondary{
+            @include mix.section_head($size:$font_xl, $color:$primary_color);
+        }
+    }
+    &_content_bottom {
+        &_text{
+            @include mix.section_description($size:16px, $color:$primary_color);
+            text-align: center;
+        }
+        .hero_popover_set_button {
+            @extend %button_styles;
+            margin-bottom: 16px;
+        }
+        
+    }
+}

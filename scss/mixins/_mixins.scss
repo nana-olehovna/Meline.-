@@ -1,4 +1,4 @@
-@use "../base/index";
+@use "../base/index" as *;
 
 @mixin flex($direction:row, $justify:center, $align:center,$gap:0px) {
     display: flex;
@@ -16,15 +16,24 @@
 @mixin main_headliner($color:$primary_color, $size:$font_xxl) {
     color: $color;
     font-size: $size;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
 }
 
-@mixin section_head($size:$font_xxl) {
+@mixin section_head($size:$font_xxl, $color:$secondary_color) {
     font-size: $size;
+    text-align: center;
+    font-weight: 500;
+    color: $color;
 }
 
-@mixin section_description($color:$secondary_color, $size:$font_xl){
+@mixin section_description($color:$secondary_color, $size:$font_xl, $line_height: 140%, $ff:$descript_font){
     color: $color;
     font-size: $size;
+    line-height: $line_height;
+    font-family: $ff;
+    font-weight: 200;
 }
 
 @mixin product_name($color:$secondary_color, $size:$font_lg) {

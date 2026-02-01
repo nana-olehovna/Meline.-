@@ -29,7 +29,16 @@
 %no_padd_block {
     width: 100%;
     height: $no_padd_block_height;
+    margin-bottom: $main_vertical_distance;
 }
+
+%bg_styles {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
 
 %header_link_styles {
     font-family: $descript_font;
@@ -47,13 +56,11 @@
     }
 }
 
-%headliners_font_style {
-    font-family: $titles_font;
-}
 
 %main_font_style {
     font-family: $titles_font;
     line-height: $line_height;
+    font-weight: 500;
 }
 
 %body_font {

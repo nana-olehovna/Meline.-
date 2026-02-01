@@ -5,7 +5,8 @@ $border_color: #edeaf4;
 $glass_bg: #848484;
 $descript_font_color: #303030;
 
-$main_horiz_padding: 130px;
+$main_horiz_distance: 130px;
+$main_vertical_distance: 90px;
 
 $no_padd_block_height: 560px;
 
@@ -15,7 +16,7 @@ $descript_font: "Raleway";
 $clicking_cursor: pointer;
 
 $line_height: 140%;
-$letter_spac: 6%;
+$letter_spac: 0.06em;
 
 $font_xs: 10px;
 $font_sm: 12px;
