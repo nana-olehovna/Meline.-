@@ -1,0 +1,14 @@
+@forward "about_intro";
+
+
+
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+
+
+
+#about {@extend %section_size_prop;}
+.about_section {
+    @include mix.flex($direction:column);
+}

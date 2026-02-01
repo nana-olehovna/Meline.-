@@ -26,10 +26,20 @@
     cursor: $clicking_cursor;
 }
 
+%section_size_prop {
+    width: 100%;
+    min-height: 100vh;
+}
+
 %no_padd_block {
     width: 100%;
     height: $no_padd_block_height;
     margin-bottom: $main_vertical_distance;
+}
+
+%padd_block {
+    width: 100%;
+    padding: $main_vertical_distance $main_horiz_distance;
 }
 
 %bg_styles {
@@ -57,13 +67,5 @@
 }
 
 
-%main_font_style {
-    font-family: $titles_font;
-    line-height: $line_height;
-    font-weight: 500;
-}
 
-%body_font {
-    font-family: $descript_font;
-    line-height: $line_height;
-}
+

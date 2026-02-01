@@ -1,9 +1,5 @@
-@use "../../../base/index" as *;
-@use "../../../mixins/index" as mix;
-@use "../../../placeholders/index" as place;
-@use "../../../media/index" as media;
-
-@forward "hero_section";
+@forward "hero_section/hero_section";
+@forward "about_section/index";
 
 .main {
     width: 100%;

@@ -1,0 +1,29 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+.about_section_intro {
+    @include mix.flex($justify:space-between, $gap: 40px);
+    @extend %padd_block;
+    &_headliner_top {
+        @include mix.section_head;
+        text-align: start;
+        margin-bottom: 20px;
+    }
+    &_headliner_bottom {
+        @include mix.product_name;
+    }
+    &_content_list {
+        @include mix.flex($align:baseline, $gap: 20px);
+    }
+    &_content_item {
+        @include mix.flex($direction:column, $gap: 28px);
+        text-align: end;
+        p {
+            @include mix.body_font($color:$descript_font_color);
+        }
+    }
+    &_content_item1 {width: 300px;}
+    &_content_item2 {width: 220px;}
+}

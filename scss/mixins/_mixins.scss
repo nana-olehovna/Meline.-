@@ -28,6 +28,20 @@
     color: $color;
 }
 
+
+@mixin product_name($color:$secondary_color, $size:$font_lg, $line_height:140%) {
+    color: $color;
+    font-size: $size;
+    line-height: $line_height;
+    font-weight: 500;
+}
+
+@mixin body_font($color:$secondary_color, $size:$font_md, $ff:$descript_font) {
+    color: $color;
+    font-size: $size;
+    font-family: $ff;
+}
+
 @mixin section_description($color:$secondary_color, $size:$font_xl, $line_height: 140%, $ff:$descript_font){
     color: $color;
     font-size: $size;
@@ -35,14 +49,3 @@
     font-family: $ff;
     font-weight: 200;
 }
-
-@mixin product_name($color:$secondary_color, $size:$font_lg) {
-    color: $color;
-    font-size: $size;
-}
-
-@mixin body_font($color:$secondary_color, $size:$font_md) {
-    color: $color;
-    font-size: $size;
-}
-
