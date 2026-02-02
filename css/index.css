@@ -44,7 +44,7 @@ html {
   margin-top: 90px;
 }
 
-.about_section_intro {
+.about_section_benefits, .about_section_intro {
   width: 100%;
   padding: 90px 130px;
 }
@@ -546,6 +546,79 @@ html {
   background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+}
+
+.about_section_benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+}
+.about_section_benefits_headliner h1 {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 500;
+  color: #4d4a99;
+}
+.about_section_benefits_content {
+  width: 100%;
+}
+.about_section_benefits_content_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.about_section_benefits_content_item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+.about_section_benefits_content_item img {
+  width: 60px;
+  height: 60px;
+}
+.about_section_benefits_content_item h4 {
+  color: #4d4a99;
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 500;
+  text-align: center;
 }
 
 .about_section {

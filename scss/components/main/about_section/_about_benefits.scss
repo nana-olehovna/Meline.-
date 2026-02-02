@@ -1,0 +1,25 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+.about_section_benefits {
+    @extend %padd_block;
+    @include mix.flex($direction:column, $gap: 80px);
+    &_headliner h1 {
+        @include mix.section_head;
+    }
+    &_content {
+        width: 100%;
+        &_list {
+            @include mix.flex($justify:space-between, $gap: 20px);
+            width: 100%;
+        }
+        &_item {
+            flex: 1;
+            @include mix.flex($direction: column, $gap: 40px);
+            img {width: 60px; height: 60px;}
+            h4 {@include mix.product_name(); text-align: center;}
+        }
+    }
+}
