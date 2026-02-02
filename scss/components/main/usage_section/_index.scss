@@ -1,0 +1,11 @@
+@forward "usage_moment";
+
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+
+
+#usage{@extend %section_size_prop;}
+.usage_section {
+    @include mix.flex($direction:column);
+}
