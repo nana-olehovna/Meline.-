@@ -32,19 +32,19 @@ html {
   cursor: pointer;
 }
 
-#about {
+#scents, #about {
   width: 100%;
   min-height: 100vh;
 }
 
-.about_section_philosophy, .hero_section_block {
+.scents_section_gallery, .about_section_philosophy, .hero_section_block {
   width: 100%;
   height: 560px;
   margin-bottom: 90px;
   margin-top: 90px;
 }
 
-.about_section_benefits, .about_section_intro {
+.scents_section_collection, .about_section_benefits, .about_section_intro {
   width: 100%;
   padding: 90px 130px;
 }
@@ -438,6 +438,7 @@ html {
   color: #303030;
   font-size: 14px;
   font-family: "Raleway";
+  line-height: 140%;
 }
 .about_section_intro_content_item1 {
   width: 300px;
@@ -532,6 +533,7 @@ html {
   color: #ffffff;
   font-size: 14px;
   font-family: "Raleway";
+  line-height: 140%;
   text-align: center;
   letter-spacing: 0.06em;
   font-weight: 200;
@@ -622,6 +624,143 @@ html {
 }
 
 .about_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px;
+}
+
+.scents_section_collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+}
+.scents_section_collection_headliner_top {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 500;
+  color: #4d4a99;
+  margin-bottom: 10px;
+}
+.scents_section_collection_headliner_bottom {
+  color: #4d4a99;
+  font-size: 24px;
+  line-height: 140%;
+  font-weight: 500;
+  text-align: center;
+}
+.scents_section_collection_content_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 20px;
+}
+.scents_section_collection_content_item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px;
+}
+.scents_section_collection_content_item img {
+  height: 400px;
+  margin-bottom: 40px;
+}
+.scents_section_collection_content_item h4 {
+  color: #4d4a99;
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.scents_section_collection_content_item p {
+  color: #4d4a99;
+  font-size: 14px;
+  font-family: "Raleway";
+  line-height: 140%;
+  text-align: center;
+}
+
+.scents_section_gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.scents_section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

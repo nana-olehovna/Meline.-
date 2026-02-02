@@ -1,0 +1,13 @@
+@forward "scents_collection";
+@forward "scents_gallery";
+
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+
+
+
+#scents {@extend %section_size_prop;}
+.scents_section {
+    @include mix.flex($direction:column);
+}

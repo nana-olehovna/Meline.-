@@ -1,0 +1,14 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+.scents_section_gallery {
+    @extend %no_padd_block;
+    @include mix.flex($direction:column, $gap: 20px);
+}
+
+.scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
+    width: 100%;
+    @include mix.flex($justify:space-between, $gap: 20px);
+}
