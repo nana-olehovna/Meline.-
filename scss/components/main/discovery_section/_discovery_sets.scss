@@ -1,0 +1,42 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+
+.discovery_section_set {
+    @extend %padd_block;
+    @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    &_headliner_top {
+        @include mix.section_head;
+        margin-bottom: 10px;
+    }
+    &_headliner_bottom {
+        @include mix.product_name($size:$font_xl);
+        text-align: center;
+    }
+    &_list {
+        @include mix.flex($direction:column, $gap:40px);
+    }
+    &_item_top, &_item_bottom {
+        h4 {
+            @include mix.product_name($color:$primary_color);
+            padding: 6px 10px;
+            background-color: $accent_color;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    }
+}
+
+.discovery_section_set_item_top {
+    width: 100%;
+    img {height: 300px;}
+}
+
+.discovery_section_set_item_bottom_wrap {
+    @include mix.flex($justify:space-between, $align:start, $gap:20px);
+    img {height: 300px;}
+}
+
+.discovery_set_button {@extend %button_styles;}

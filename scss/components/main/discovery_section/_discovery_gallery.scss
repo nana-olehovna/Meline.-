@@ -1,0 +1,10 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+.discovery_section_gallery {
+    @extend %no_padd_block;
+    @include mix.flex($justify:space-between, $gap: 20px);
+    &_item_wrap {@include mix.flex($direction:column, $justify:space-between, $gap: 20px);}
+}

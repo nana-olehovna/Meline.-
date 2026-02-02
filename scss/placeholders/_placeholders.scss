@@ -11,6 +11,8 @@
     font-family: $titles_font;
     text-transform: uppercase;
     cursor: $clicking_cursor;
+    &:hover {background-color: $accent_color;}
+    &:active {background-color: $primary_color; color: $secondary_color; border: 1px solid $accent_color;}
 }
 
 %button_styles_mob{
