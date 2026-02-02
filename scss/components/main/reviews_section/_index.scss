@@ -1,0 +1,12 @@
+@forward "reviews_slider";
+
+
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+
+
+#reviews {@extend %section_size_prop;}
+.discovery_section {
+    @include mix.flex($direction:column);
+}

@@ -1,0 +1,59 @@
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+@use "../../../media/index" as media;
+
+.reviews_section_wrap {
+    @include mix.flex($direction:column);
+}
+
+.reviews_section {
+    @extend %padd_block;
+    @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    min-height: 560px;
+    &_headliner_top {
+        @include mix.section_head;
+    }
+    &_content {
+        width: 100%;
+        flex: 1;
+    }
+    &_list {
+        height: 100%;
+        @include mix.flex($gap:20px);
+        position: relative;
+    }
+    &_item {
+        @include mix.flex($justify:space-between, $align:start, $gap:20px);
+        width: calc(50% - 20px);
+        opacity: 1;
+        position: absolute;
+        height: 140px;
+        img {width: 60px; height: 60px;}
+        &_info {
+            height: 100%;
+            background-color: $accent_color;
+            padding: 10px 20px;
+            .comment_name {@include mix.product_name; margin-bottom: 10px;}
+            .comment_text {@include mix.body_font;}
+        }
+    }
+}
+
+.comment1 {top:0; left:0; z-index: 10; animation: vanish 4s ease-out 4s forwards;}
+.comment2 {top:0; right:0; z-index: 10; animation: vanish 4s ease-out 4s forwards;}
+.comment3 {top:0; left:0; z-index: 5; animation: vanish 8s ease-out 8s forwards;}
+.comment4 {top:0; right:0; z-index: 5; animation: vanish 8s ease-out 8s forwards;}
+.comment5 {top:0; left:0; z-index: 1;}
+.comment6 {top:0; right:0; z-index: 1; }
+
+.slider_arrows {
+    @include mix.flex($justify:space-between, $gap: 20px);
+    cursor: $clicking_cursor;
+}
+
+
+@keyframes vanish {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
