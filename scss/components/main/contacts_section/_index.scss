@@ -1,0 +1,10 @@
+@forward "contacts";
+
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+
+#contacts {@extend %section_size_prop;}
+.contacts_section_wrap {
+    @include mix.flex($direction:column);
+}
