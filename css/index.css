@@ -1146,6 +1146,7 @@ html {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-height: 140px;
 }
 .reviews_section_list {
   height: 100%;
@@ -1208,36 +1209,48 @@ html {
   line-height: 140%;
 }
 
+.reviews_section_content:hover .comment1 {
+  -webkit-animation: vanish 4s linear 2s forwards;
+          animation: vanish 4s linear 2s forwards;
+}
+
+.reviews_section_content:hover .comment2 {
+  -webkit-animation: vanish 4s linear 2s forwards;
+          animation: vanish 4s linear 2s forwards;
+}
+
+.reviews_section_content:hover .comment3 {
+  -webkit-animation: vanish 4s linear 8s forwards;
+          animation: vanish 4s linear 8s forwards;
+}
+
+.reviews_section_content:hover .comment4 {
+  -webkit-animation: vanish 4s linear 8s forwards;
+          animation: vanish 4s linear 8s forwards;
+}
+
 .comment1 {
   top: 0;
   left: 0;
   z-index: 10;
-  -webkit-animation: vanish 4s ease-out 4s forwards;
-          animation: vanish 4s ease-out 4s forwards;
 }
 
 .comment2 {
   top: 0;
   right: 0;
   z-index: 10;
-  -webkit-animation: vanish 4s ease-out 4s forwards;
-          animation: vanish 4s ease-out 4s forwards;
 }
 
 .comment3 {
   top: 0;
   left: 0;
   z-index: 5;
-  -webkit-animation: vanish 8s ease-out 8s forwards;
-          animation: vanish 8s ease-out 8s forwards;
 }
 
 .comment4 {
   top: 0;
   right: 0;
   z-index: 5;
-  -webkit-animation: vanish 8s ease-out 8s forwards;
-          animation: vanish 8s ease-out 8s forwards;
 }
 
 .comment5 {
@@ -1271,19 +1284,25 @@ html {
 }
 
 @-webkit-keyframes vanish {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  90% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
 
 @keyframes vanish {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  90% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }

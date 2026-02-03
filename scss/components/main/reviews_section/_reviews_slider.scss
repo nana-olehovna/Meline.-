@@ -17,6 +17,7 @@
     &_content {
         width: 100%;
         flex: 1;
+        min-height: 140px;
     }
     &_list {
         height: 100%;
@@ -40,10 +41,16 @@
     }
 }
 
-.comment1 {top:0; left:0; z-index: 10; animation: vanish 4s ease-out 4s forwards;}
-.comment2 {top:0; right:0; z-index: 10; animation: vanish 4s ease-out 4s forwards;}
-.comment3 {top:0; left:0; z-index: 5; animation: vanish 8s ease-out 8s forwards;}
-.comment4 {top:0; right:0; z-index: 5; animation: vanish 8s ease-out 8s forwards;}
+
+.reviews_section_content:hover .comment1 {animation: vanish 4s linear 2s forwards;}
+.reviews_section_content:hover .comment2 {animation: vanish 4s linear 2s forwards;}
+.reviews_section_content:hover .comment3 {animation: vanish 4s linear 8s forwards;}
+.reviews_section_content:hover .comment4 {animation: vanish 4s linear 8s forwards;}
+
+.comment1 {top:0; left:0; z-index: 10; }
+.comment2 {top:0; right:0; z-index: 10; }
+.comment3 {top:0; left:0; z-index: 5; }
+.comment4 {top:0; right:0; z-index: 5; }
 .comment5 {top:0; left:0; z-index: 1;}
 .comment6 {top:0; right:0; z-index: 1; }
 
@@ -54,6 +61,7 @@
 
 
 @keyframes vanish {
-    from {opacity: 1;}
-    to {opacity: 0;}
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
 }
