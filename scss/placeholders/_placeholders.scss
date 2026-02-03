@@ -59,6 +59,7 @@
     color: $primary_color;
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: 300;
     cursor: $clicking_cursor;
     &:hover {
         text-decoration: underline;

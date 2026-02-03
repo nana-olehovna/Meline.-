@@ -1,0 +1,86 @@
+@use "../../base/index" as *;
+@use "../../mixins/index" as mix;
+@use "../../placeholders/index" as place;
+@use "../../media/index" as media;
+
+.footer {
+    width: 100%;
+    min-height: 200px;
+    margin-top: $main_vertical_distance;
+    background-color: $secondary_color;
+    &_wrap {
+        padding: 45px 130px 10px 130px;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 55px;
+    }
+}
+
+.footer_div1 {grid-area: 1/1/2/4;}
+.footer_div2 {grid-area: 1/4/2/5;}
+.footer_div3 {grid-area: 2/1/3/5;}
+.footer_div4 {grid-area: 3/1/4/5;}
+
+.footer_links_list {
+    @include mix.flex($justify:space-between);
+    margin-bottom: 60px;
+}
+.footer_links_item{
+    flex:1;
+    @include mix.flex($justify:start, $align:start, $direction:column, $gap: 25px);
+    a {@extend %header_link_styles;}
+}
+
+.footer_blocks_list {
+    @include mix.flex($justify:space-between);
+    margin-bottom: 60px;
+}
+
+.footer_blocks_item {flex: 1;}
+
+.subscription {
+    @include mix.flex($direction: column, $align:start, $gap: 10px);
+    &_label {@include mix.body_font($color:$primary_color); white-space: nowrap; font-weight: 300;}
+    &_input_wrap {
+        @include mix.flex($justify: space-between);
+        height: 40px;
+        background-color: $primary_color;
+        p {
+            @include mix.body_font($size:$font_sm);
+            margin-left: 20px;
+        }
+        input {
+            @include mix.body_font($size:$font_sm);
+            outline: none;
+            border: none;
+            min-width: 0;
+            flex: 1;
+            padding: 10px;
+        }
+        button {
+            height: 100%;
+            width: 40px;
+            border: none;
+            cursor: $clicking_cursor;
+        }
+    }
+}
+
+.footer_bottom_links {
+    @include mix.flex($direction:column, $gap: 15px);
+    height: 100%;
+    padding-top: 20px;
+    a {
+        @include mix.body_font($color:$primary_color);
+        &:hover {text-decoration: none;}
+        &:active {text-decoration: none; color:$descript_font_color;}
+    }
+}
+
+.footer_bottom {
+    @include mix.flex();
+    p {@include mix.body_font($color:$primary_color); font-weight: 300;}
+}
