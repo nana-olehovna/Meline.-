@@ -1,0 +1,10 @@
+.scroll_up_wrap {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    opacity: 0.1;
+    img {width: 60px;height: 60px;}
+    &:hover {opacity: 0.3;}
+}

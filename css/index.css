@@ -42,7 +42,6 @@ html {
 
 #contacts, #shipping, #reviews, #usage, #set, #scents, #about {
   width: 100%;
-  min-height: 100vh;
 }
 
 .reviews_section_gallery, .discovery_section_gallery, .scents_section_gallery, .about_section_philosophy, .hero_section_block {
@@ -1760,4 +1759,20 @@ html {
   font-family: "Raleway";
   line-height: 140%;
   font-weight: 300;
+}
+
+.scroll_up_wrap {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+}
+.scroll_up_wrap img {
+  width: 60px;
+  height: 60px;
+}
+.scroll_up_wrap:hover {
+  opacity: 0.3;
 }
