@@ -1,0 +1,10 @@
+@forward "shipping_section";
+
+@use "../../../base/index" as *;
+@use "../../../mixins/index" as mix;
+@use "../../../placeholders/index" as place;
+
+#shipping {@extend %section_size_prop;}
+.shipping_section_wrap {
+    @include mix.flex($direction:column);
+}
