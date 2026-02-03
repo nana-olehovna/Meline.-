@@ -45,7 +45,7 @@ html {
   min-height: 100vh;
 }
 
-.discovery_section_gallery, .scents_section_gallery, .about_section_philosophy, .hero_section_block {
+.reviews_section_gallery, .discovery_section_gallery, .scents_section_gallery, .about_section_philosophy, .hero_section_block {
   width: 100%;
   height: 560px;
   margin-bottom: 90px;
@@ -57,7 +57,7 @@ html {
   padding: 90px 130px;
 }
 
-.about_section_philosophy, .hero_section_block {
+.reviews_section_gallery, .about_section_philosophy, .hero_section_block {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1287,6 +1287,10 @@ html {
     opacity: 0;
   }
 }
+.reviews_section_gallery {
+  background: url("../../../../images/Gallery3/1.png");
+}
+
 .discovery_section {
   display: -webkit-box;
   display: -ms-flexbox;
