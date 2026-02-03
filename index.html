@@ -221,7 +221,99 @@
                                 of inspiration.</p>
                         </li>
                     </ul>
-                    <button class="discovery_section_gifts_button">Choose free diffuser</button>
+                    <button popovertarget="popover_set_window" class="discovery_section_gifts_button">Choose free diffuser</button>
+                </div>
+                <div popover id="popover_set_window" class="popover_set_window">
+                    <div class="popover_set">
+                        <div class="popover_set_window_close"><button class="popover_set_window_close_button" popovertarget="popover_set_window" popovertargetaction="close"><img src="icons/cross.svg" alt=""></button></div>
+                        <h1>Choose your set</h1>
+                        <div class="popover_set_top">
+                            <p class="popover_set_step">1. Select the number of candles in the set</p>
+                            <form class="form_radio" action="/send" method="post">
+                                <div class="form_radio_item"><input type="radio" name="products_amount" value="two" id="two"><label for="two">Set of two candles</label></div>
+                                <div class="form_radio_item"><input type="radio" name="products_amount" value="three" id="three"><label for="three">Set of three candles</label></div>
+                                <div class="form_radio_item"><input type="radio" name="products_amount" value="four" id="four"><label for="four">Set of four candles</label></div>
+                            </form>
+                        </div>
+                        <div class="popover_set_middle">
+                            <p class="popover_set_step">2. Choose scents for the set</p>
+                            <ul class="popover_set_middle_list">
+                                <li class="popover_set_middle_item">
+                                    <div class="products_amount">
+                                        <div class="products_amount_part more_less">-</div>
+                                        <div class="products_amount_part number">1</div>
+                                        <div class="products_amount_part more_less">+</div>
+                                    </div>
+                                    <img src="images/Popover_Set/1.png" alt="">
+                                    <p>Caramel Popcorn</p>
+                                </li>
+                                <li class="popover_set_middle_item">
+                                    <div class="products_amount">
+                                        <div class="products_amount_part more_less">-</div>
+                                        <div class="products_amount_part number">1</div>
+                                        <div class="products_amount_part more_less">+</div>
+                                    </div>
+                                    <img src="images/Popover_Set/2.png" alt="">
+                                    <p>Lemon Croissant</p>
+                                </li>
+                                <li class="popover_set_middle_item">
+                                    <div class="products_amount">
+                                        <div class="products_amount_part more_less">-</div>
+                                        <div class="products_amount_part number">1</div>
+                                        <div class="products_amount_part more_less">+</div>
+                                    </div>
+                                    <img src="images/Popover_Set/3.png" alt="">
+                                    <p>Blueberry Pie</p>
+                                </li>
+                                <li class="popover_set_middle_item">
+                                    <div class="products_amount">
+                                        <div class="products_amount_part more_less">-</div>
+                                        <div class="products_amount_part number">1</div>
+                                        <div class="products_amount_part more_less">+</div>
+                                    </div>
+                                    <img src="images/Popover_Set/4.png" alt="">
+                                    <p>Hazelnut Cookie</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="popover_set_bottom_wrap">
+                            <div class="popover_set_bottom two_set">
+                                <div class="popover_set_bottom_title"><h3>Your order:</h3></div>
+                                <div class="popover_set_bottom_description">
+                                    <h4>Set of two candles</h4>
+                                    <p>Caramel Popcorn</p>
+                                    <p>Lemon croissant</p>
+                                </div>
+                            </div>
+                            <div class="popover_set_bottom three_set">
+                                <div class="popover_set_bottom_title">
+                                    <h3>Your order:</h3>
+                                </div>
+                                <div class="popover_set_bottom_description">
+                                    <h4>Set of three candles </h4>
+                                    <p>Caramel Popcorn</p>
+                                    <p>Lemon croissant</p>
+                                    <p>Hazelnut Cookie</p>
+                                </div>
+                            </div>
+                            <div class="popover_set_bottom four_set">
+                                <div class="popover_set_bottom_title">
+                                    <h3>Your order:</h3>
+                                </div>
+                                <div class="popover_set_bottom_description">
+                                    <h4>Set of four candles </h4>
+                                    <p>Caramel Popcorn</p>
+                                    <p>Lemon croissant</p>
+                                    <p>Hazelnut Cookie</p>
+                                    <p>Blueberry Pie</p>
+                                </div>
+                            </div>
+                            <div class="popover_set_bottom_link">
+                                <a href="#">Delivery Details</a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="discovery_section_gallery">
                     <div class="discovery_section_gallery_item"><img src="images/Gallery2/1.png" alt=""></div>
@@ -316,7 +408,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> 
                     <div class="slider_arrows">
                         <img src="icons/left_arrow.svg" alt="">
                         <img src="icons/right_arrow.svg" alt="">
