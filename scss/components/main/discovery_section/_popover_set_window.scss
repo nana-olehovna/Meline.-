@@ -10,6 +10,8 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid black;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .popover_set {
@@ -22,10 +24,10 @@
     border: 1px solid $primary_color;
     padding: 40px;
     @include mix.flex($direction:column, $gap: 10px);
-    h1 {@includemix.section_head($color:$primary_color); z-index: 10;}
+    h1 {@include mix.section_head($color:$primary_color); z-index: 10;}
 }
 
-/*
+
 .popover_set::before {
     content: '';
     inset: 0;
@@ -35,17 +37,18 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
-*/
+
 
 .popover_set_window_close {
     z-index: 10;
     button {
         position: absolute;
-        top: 40px;
-        right: 20px;
+        top: -20px;
+        right: -60px;
         background: transparent;
         border: none;
         margin: 20px;
+        
         cursor: $clicking_cursor;
     }
 }
@@ -82,10 +85,12 @@
     z-index: 10;
     &_list {
         width: 100%;
-        @include mix.flex($justify: start, $gap: 10px);
+        max-width: 650px;
+        margin: 0 auto;
+        @include mix.flex($justify: space-between, $gap: 10px);
     }
     &_item {
-        flex: 1;
+        flex: 0 0 120px;
         @include mix.flex($direction:column, $align: center, $gap: 10px);
         p {
             @include mix.body_font; text-align: center; white-space: nowrap;
@@ -102,7 +107,7 @@
         height: 16px;
         border: 1px solid #edeaf4;
         @include mix.flex();
-        font-size: 10px; line-height: 140%;
+        @include mix.body_font($size:$font_sm); text-align: center; 
     }
     .more_less {cursor: $clicking_cursor;}
 }
@@ -120,16 +125,17 @@
     @include mix.flex($align: baseline, $gap: 40px);
     h3 {@include mix.product_name;}
     h4 {@include mix.body_font; margin-bottom: 10px;}
-    p {@include mix.body_font($size: 10px);}
+    p {@include mix.body_font($size:$font_sm);}
 }
 
 .popover_set_bottom_link {
     @include mix.flex ;
+    margin: 0 auto;
     a {@include mix.body_font;}
 }
 
 .two_set, .three_set, .four_set {display: none;}
 
-popover_set:has(#two:checked) .two_set {display: flex;}
-popover_set:has(#three:checked) .three_set {display: flex;}
-popover_set:has(#four:checked) .four_set {display: flex;}
+.popover_set:has(#two:checked) .two_set {display: flex;}
+.popover_set:has(#three:checked) .three_set {display: flex;}
+.popover_set:has(#four:checked) .four_set {display: flex;}
