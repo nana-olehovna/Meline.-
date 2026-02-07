@@ -5,6 +5,7 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    font-size: $main_font_padding_size;
 }
 
 html {scroll-behavior: smooth;}
@@ -13,7 +14,8 @@ html {scroll-behavior: smooth;}
     height: 100vh;
     width: 100%;
     font-family: $titles_font;
-    max-width: 1200px;
+    max-width: 1440px;
+    min-width: 320px;
     margin: 0 auto;
     background-color: $primary_color;
 }

@@ -10,8 +10,8 @@
     padding: 5px;
     background: transparent;
     border: none;
+    @include media.laptop{display: none;}
     @include media.tablet{display: none;}
-    @include media.desktop{display: none;}
 }
 
 

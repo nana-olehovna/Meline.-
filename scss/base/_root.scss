@@ -18,15 +18,24 @@ $clicking_cursor: pointer;
 $line_height: 140%;
 $letter_spac: 0.06em;
 
-$font_xs: 10px;
-$font_sm: 12px;
-$font_md: 14px;
-$font_lg: 20px;
-$font_xl: 24px;
-$font_xxl: 48px;
+$main_font_padding_size: 20px;
 
+$font_xs: 0.5rem;
+$font_sm: 0.6rem;
+$font_md: 0.7rem;
+$font_lg: 1rem;
+$font_xl: 1.2rem;
+$font_xxl: 2.4rem;
 
-$font_lg_mob: 16px;
-$font_xl_mob: 18px;
-$font_xxl_mob: 24px;
-$font_xxl_h1_mob: 28px;
+$font_lg_mob: 0.8rem;
+$font_xl_mob: 0.9rem;
+$font_xxl_mob: 1.2rem;
+$font_xxl_h1_mob: 1.4rem;
+
+$pad_xs: 8px;
+$pad_sm: 20px;
+$pad_md: 30px;
+$pad_lg: 40px;
+$pad_xl: 80px;
+$pad_2xl: 90px;
+$pad_3xl: 130px;

@@ -4,6 +4,7 @@
   list-style: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 20px;
 }
 
 html {
@@ -14,7 +15,8 @@ html {
   height: 100vh;
   width: 100%;
   font-family: "Romanovsky W08 Regular";
-  max-width: 1200px;
+  max-width: 1440px;
+  min-width: 320px;
   margin: 0 auto;
   background-color: #ffffff;
 }
@@ -25,7 +27,7 @@ html {
   border: none;
   background-color: #4d4a99;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1rem;
   letter-spacing: 0.06em;
   font-family: "Romanovsky W08 Regular";
   text-transform: uppercase;
@@ -65,7 +67,7 @@ html {
 
 .footer_links_item a, .header_nav_item a {
   font-family: "Raleway";
-  font-size: 12px;
+  font-size: 0.6rem;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
@@ -88,7 +90,7 @@ html {
   background: transparent;
   border: none;
 }
-@media (min-width: 430px) and (max-width: 768px) {
+@media (min-width: 1024) and (max-width: 1440) {
   .popover_nav_menu_button {
     display: none;
   }
@@ -219,7 +221,7 @@ html {
 
 .header_nav_item_mob a {
   font-family: "Raleway";
-  font-size: 20px;
+  font-size: 1rem;
   color: #4d4a99;
   text-decoration: none;
   text-transform: lowercase;
@@ -252,13 +254,6 @@ html {
           align-items: center;
   gap: 0px;
 }
-@media (min-width: 320px) and (max-width: 430px) {
-  .header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-}
 .header_nav_list {
   width: 80%;
   display: -webkit-box;
@@ -275,11 +270,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-}
-@media (min-width: 320px) and (max-width: 430px) {
-  .header_nav_list {
-    display: none;
-  }
 }
 .hero_section {
   display: -webkit-box;
@@ -355,14 +345,14 @@ html {
 }
 .hero_section_block_content_top .main_headliner_primary {
   color: #ffffff;
-  font-size: 48px;
+  font-size: 2.4rem;
   text-transform: uppercase;
   font-weight: 500;
   text-align: center;
   margin-bottom: 16px;
 }
 .hero_section_block_content_top .main_headliner_secondary {
-  font-size: 24px;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: 500;
   color: #ffffff;
@@ -396,7 +386,7 @@ html {
   gap: 40px;
 }
 .about_section_intro_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -405,7 +395,7 @@ html {
 }
 .about_section_intro_headliner_bottom {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
 }
@@ -444,7 +434,7 @@ html {
 }
 .about_section_intro_content_item p {
   color: #303030;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
 }
@@ -501,7 +491,7 @@ html {
 }
 .philosophy_content_box_headliner h3 {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 140%;
   font-weight: 500;
 }
@@ -539,7 +529,7 @@ html {
 }
 .philosophy_content_box_text p {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   text-align: center;
@@ -575,7 +565,7 @@ html {
   gap: 80px;
 }
 .about_section_benefits_headliner h1 {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -625,7 +615,7 @@ html {
 }
 .about_section_benefits_content_item h4 {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -665,7 +655,7 @@ html {
   gap: 80px;
 }
 .scents_section_collection_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -673,7 +663,7 @@ html {
 }
 .scents_section_collection_headliner_bottom {
   color: #4d4a99;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -719,7 +709,7 @@ html {
 }
 .scents_section_collection_content_item h4 {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -727,7 +717,7 @@ html {
 }
 .scents_section_collection_content_item p {
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   text-align: center;
@@ -802,7 +792,7 @@ html {
   gap: 80px;
 }
 .discovery_section_set_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -810,7 +800,7 @@ html {
 }
 .discovery_section_set_headliner_bottom {
   color: #4d4a99;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -833,7 +823,7 @@ html {
 }
 .discovery_section_set_item_top h4, .discovery_section_set_item_bottom h4 {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
   padding: 6px 10px;
@@ -886,7 +876,7 @@ html {
   gap: 80px;
 }
 .discovery_section_gifts_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -894,7 +884,7 @@ html {
 }
 .discovery_section_gifts_headliner_bottom {
   color: #4d4a99;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -940,7 +930,7 @@ html {
 }
 .discovery_section_gifts_item h4 {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -948,7 +938,7 @@ html {
 }
 .discovery_section_gifts_item p {
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   text-align: center;
@@ -1023,7 +1013,7 @@ html {
   gap: 10px;
 }
 .popover_set h1 {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #ffffff;
@@ -1055,7 +1045,7 @@ html {
 
 .popover_set_step {
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   text-transform: uppercase;
@@ -1088,7 +1078,7 @@ html {
 .form_radio label {
   margin-left: 8px;
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
 }
@@ -1162,7 +1152,7 @@ html {
 }
 .popover_set_middle_item p {
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   text-align: center;
@@ -1210,7 +1200,7 @@ html {
           align-items: center;
   gap: 0px;
   color: #4d4a99;
-  font-size: 12px;
+  font-size: 0.6rem;
   font-family: "Raleway";
   line-height: 140%;
   text-align: center;
@@ -1258,20 +1248,20 @@ html {
 }
 .popover_set_bottom h3 {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
 }
 .popover_set_bottom h4 {
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   margin-bottom: 10px;
 }
 .popover_set_bottom p {
   color: #4d4a99;
-  font-size: 12px;
+  font-size: 0.6rem;
   font-family: "Raleway";
   line-height: 140%;
 }
@@ -1295,7 +1285,7 @@ html {
 }
 .popover_set_bottom_link a {
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
 }
@@ -1356,7 +1346,7 @@ html {
   gap: 80px;
 }
 .usage_section_moment_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -1364,7 +1354,7 @@ html {
 }
 .usage_section_moment_headliner_bottom {
   color: #4d4a99;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -1396,7 +1386,7 @@ html {
 }
 .usage_section_moment_item h4 {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -1472,7 +1462,7 @@ html {
   min-height: 560px;
 }
 .reviews_section_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -1533,14 +1523,14 @@ html {
 }
 .reviews_section_item_info .comment_name {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
   margin-bottom: 10px;
 }
 .reviews_section_item_info .comment_text {
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
 }
@@ -1680,7 +1670,7 @@ html {
   gap: 80px;
 }
 .shipping_section_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -1688,7 +1678,7 @@ html {
 }
 .shipping_section_headliner_bottom {
   color: #4d4a99;
-  font-size: 24px;
+  font-size: 1.2rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -1732,7 +1722,7 @@ html {
       -ms-flex: 1;
           flex: 1;
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
   text-align: center;
@@ -1774,7 +1764,7 @@ html {
   gap: 80px;
 }
 .contacts_section_headliner_top {
-  font-size: 48px;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
@@ -1862,7 +1852,7 @@ html {
 }
 .contacts_section_content_info_item h4 {
   color: #4d4a99;
-  font-size: 20px;
+  font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
 }
@@ -1870,7 +1860,7 @@ html {
 .contacts_section_info_map a {
   display: block;
   color: #4d4a99;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   margin-bottom: 10px;
@@ -2009,7 +1999,7 @@ html {
 }
 .subscription_label {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   white-space: nowrap;
@@ -2035,14 +2025,14 @@ html {
 }
 .subscription_input_wrap p {
   color: #4d4a99;
-  font-size: 12px;
+  font-size: 0.6rem;
   font-family: "Raleway";
   line-height: 140%;
   margin-left: 20px;
 }
 .subscription_input_wrap input {
   color: #4d4a99;
-  font-size: 12px;
+  font-size: 0.6rem;
   font-family: "Raleway";
   line-height: 140%;
   outline: none;
@@ -2080,7 +2070,7 @@ html {
 }
 .footer_bottom_links a {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
 }
@@ -2110,7 +2100,7 @@ html {
 }
 .footer_bottom p {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
   font-weight: 300;
