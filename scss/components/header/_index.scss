@@ -10,12 +10,17 @@
     height: 70px;
     background-color: $secondary_color;
     @include mix.flex();
+    @include media.mob_horiz {justify-content: start;}
+    @include media.mob_vertical{justify-content: start;}
     &_nav_list {
         width: 80%;
         @include mix.flex($justify:space-evenly, $gap:10px);
+        @include media.tablet {width: 100%;}
+        @include media.mob_horiz{display: none;}
+        @include media.mob_vertical{display: none;}
     }
     &_nav_item a{
-        @extend %header_link_styles
+        @extend %header_link_styles;
     }
 }
 

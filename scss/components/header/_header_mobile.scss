@@ -40,7 +40,7 @@
     }
     &_content_bottom_links {
         @include mix.flex($gap:20px);
-        img {width: 16px; height: 16px; background: transparent;}
+        img {width: 16px; height: 16px; background: transparent; cursor: $clicking_cursor;}
     }
     &_content_bottom_logo img{
         width: 90px;

@@ -1,5 +1,7 @@
+
+
 @mixin laptop {
-    @media (min-width: 1024) and (max-width: 1440){
+    @media (min-width: 1024px) {
         @content;
     }
 }
@@ -17,7 +19,7 @@
 }
 
 @mixin mob_vertical {
-    @media (min-width: 320px) and (max-width: 430px) {
+    @media (max-width: 430px) {
         @content;
     }
 }
