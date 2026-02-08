@@ -1,5 +1,3 @@
-@forward "footer_media";
-
 @use "../../base/index" as *;
 @use "../../mixins/index" as mix;
 @use "../../placeholders/index" as place;
@@ -11,20 +9,20 @@
     margin-top: $main_vertical_distance;
     background-color: $secondary_color;
     &_wrap {
-        padding: 3.75vw 10.8vw 1vw 10.8vw;
-        @include media.tablet {padding: 3.75vw 8vw 1vw 8vw;}
-        @include media.mob_horiz {padding: 10vw 8vw 4vw 8vw;}
-        @include media.mob_vertical {padding: 19.4vw 11.7vw 9vw 11.7vw;}
         width: 100%;
         height: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, auto);
         grid-column-gap: 55px;
+        padding: 3.75vw 10.8vw 1vw 10.8vw;
         .footer_div1 {grid-area: 1/1/2/4;}
         .footer_div2 {grid-area: 1/4/2/5;}
         .footer_div3 {grid-area: 2/1/3/5;}
         .footer_div4 {grid-area: 3/1/4/5;}
+        @include media.tablet {padding: 3.75vw 8vw 1vw 8vw;}
+        @include media.mob_horiz {padding: 10vw 8vw 4vw 8vw;}
+        @include media.mob_vertical {padding: 19.4vw 11.7vw 9vw 11.7vw;}
         @include media.mob_horiz {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(4, auto);
@@ -79,22 +77,22 @@
     @include mix.flex($direction: column, $align:start, $gap: 10px);
     &_label {@include mix.body_font($color:$primary_color); white-space: nowrap; font-weight: 300;}
     &_input_wrap {
-        @include mix.flex($justify: space-between);
         height: 40px;
         background-color: $primary_color;
+        @include mix.flex($justify: space-between);
         
         p {
-            @include mix.body_font($size:$font_sm);
             margin-left: 20px;
+            @include mix.body_font($size:$font_sm);
             @include media.tablet {margin: 5px;}
         }
         input {
-            @include mix.body_font($size:$font_sm);
             outline: none;
             border: none;
             min-width: 0;
             flex: 1;
             padding: 10px;
+            @include mix.body_font($size:$font_sm);
             @include media.tablet {padding: 5px 2px;}
         }
         button {
@@ -107,9 +105,9 @@
 }
 
 .footer_bottom_links {
-    @include mix.flex($direction:column, $gap: 15px);
     height: 100%;
     padding-top: 20px;
+    @include mix.flex($direction:column, $gap: 15px);
     @include media.mob_horiz {padding: 0; width: 100%; text-align: center;}
     @include media.mob_vertical {padding: 0; width: 100%; text-align: center;}
     a {

@@ -52,3 +52,17 @@
     font-family: $ff;
     font-weight: 200;
 }
+
+@mixin bg_styles {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+@mixin no_padd_block_mob {
+    width: 100%;
+    max-height: $no_padd_block_height;
+    margin-bottom: $main_vertical_distance_mob;
+    margin-top: $main_vertical_distance_mob;
+}

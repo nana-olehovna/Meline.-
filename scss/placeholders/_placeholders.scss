@@ -40,6 +40,13 @@
     margin-top: $main_vertical_distance;
 }
 
+%no_padd_block_mob {
+    width: 100%;
+    max-height: $no_padd_block_height;
+    margin-bottom: $main_vertical_distance_mob;
+    margin-top: $main_vertical_distance_mob;
+}
+
 %padd_block {
     width: 100%;
     padding: $main_vertical_distance $main_horiz_distance;
