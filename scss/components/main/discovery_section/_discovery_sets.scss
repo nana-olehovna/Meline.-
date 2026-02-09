@@ -7,6 +7,7 @@
 .discovery_section_set {
     @extend %padd_block;
     @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    @include media.mob_vertical{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
     &_headliner_top {
         @include mix.section_head;
         margin-bottom: 10px;
