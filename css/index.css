@@ -1043,12 +1043,32 @@ html {
           align-items: center;
   gap: 80px;
 }
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_collection {
+    padding: 20.5vw 45px;
+  }
+}
+@media (max-width: 430px) {
+  .scents_section_collection {
+    padding: 20.5vw 11.5vw;
+  }
+}
 .scents_section_collection_headliner_top {
+  margin-bottom: 10px;
   font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
-  margin-bottom: 10px;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_collection_headliner_top {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+}
+@media (max-width: 430px) {
+  .scents_section_collection_headliner_top {
+    font-size: 1.2rem;
+  }
 }
 .scents_section_collection_headliner_bottom {
   color: #4d4a99;
@@ -1056,6 +1076,16 @@ html {
   line-height: 140%;
   font-weight: 500;
   text-align: center;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_collection_headliner_bottom {
+    font-size: clamp(0.9rem, 3.3vw, 1.2rem);
+  }
+}
+@media (max-width: 430px) {
+  .scents_section_collection_headliner_bottom {
+    font-size: 0.9rem;
+  }
 }
 .scents_section_collection_content_list {
   display: -webkit-box;
@@ -1065,18 +1095,36 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
   gap: 20px;
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scents_section_collection_content_list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_collection_content_list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+@media (max-width: 430px) {
+  .scents_section_collection_content_list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 80px;
+  }
+}
 .scents_section_collection_content_item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1091,10 +1139,29 @@ html {
       -ms-flex-align: center;
           align-items: center;
   gap: 0px;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scents_section_collection_content_item {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_collection_content_item {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
 }
 .scents_section_collection_content_item img {
   height: 400px;
   margin-bottom: 40px;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_collection_content_item img {
+    margin-bottom: 20px;
+  }
 }
 .scents_section_collection_content_item h4 {
   color: #4d4a99;
@@ -1103,6 +1170,16 @@ html {
   font-weight: 500;
   text-align: center;
   margin-bottom: 8px;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_collection_content_item h4 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 430px) {
+  .scents_section_collection_content_item h4 {
+    font-size: 0.8rem;
+  }
 }
 .scents_section_collection_content_item p {
   color: #4d4a99;
