@@ -10,13 +10,22 @@
     &_headliner_top {
         @include mix.section_head;
         margin-bottom: 10px;
+        @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
+        @include media.mob_vertical{font-size: $font_xxl_mob;}
     }
     &_headliner_bottom {
         @include mix.product_name($size:$font_xl);
         text-align: center;
+        @include media.laptop {max-width: 50%; margin: 0 auto;}
+        @include media.tablet {max-width: 80%; margin: 0 auto;}
+        @include media.mob_horiz{font-size: clamp($font_xl_mob, 3.3vw, $font_xl);}
+        @include media.mob_vertical{font-size: $font_xl_mob;}
     }
     &_list {
         @include mix.flex($direction:column, $gap:40px);
+        @include media.tablet {
+            width: 100%;
+        }
     }
     &_item_top, &_item_bottom {
         h4 {
@@ -25,18 +34,27 @@
             background-color: $accent_color;
             margin-bottom: 20px;
             display: inline-block;
+            white-space: nowrap;
+            @include media.mob_horiz{font-size: $font_xl_mob;}
+            @include media.mob_vertical{font-size: $font_lg_mob;}
         }
     }
 }
 
 .discovery_section_set_item_top {
     width: 100%;
-    img {height: 300px;}
+    img {width: 100%;}
+    
 }
 
 .discovery_section_set_item_bottom_wrap {
     @include mix.flex($justify:space-between, $align:start, $gap:20px);
-    img {height: 300px;}
+    img {width: 100%;}
 }
 
 .discovery_set_button {@extend %button_styles;}
+
+@media (max-width: 600px) {
+    .discovery_section_set_item_bottom_wrap {flex-wrap: wrap;}
+    .set1, .set2, .set3 {flex-basis: 100%;}
+}
