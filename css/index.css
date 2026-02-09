@@ -2325,12 +2325,32 @@ html {
           align-items: center;
   gap: 80px;
 }
+@media (min-width: 430px) and (max-width: 768px) {
+  .shipping_section {
+    padding: 20.5vw 11.5vw;
+  }
+}
+@media (max-width: 430px) {
+  .shipping_section {
+    padding: 20.5vw 11.5vw;
+  }
+}
 .shipping_section_headliner_top {
+  margin-bottom: 10px;
   font-size: 2.4rem;
   text-align: center;
   font-weight: 500;
   color: #4d4a99;
-  margin-bottom: 10px;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .shipping_section_headliner_top {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+}
+@media (max-width: 430px) {
+  .shipping_section_headliner_top {
+    font-size: 1.2rem;
+  }
 }
 .shipping_section_headliner_bottom {
   color: #4d4a99;
@@ -2338,6 +2358,28 @@ html {
   line-height: 140%;
   font-weight: 500;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .shipping_section_headliner_bottom {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .shipping_section_headliner_bottom {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .shipping_section_headliner_bottom {
+    font-size: clamp(0.9rem, 3.3vw, 1.2rem);
+  }
+}
+@media (max-width: 430px) {
+  .shipping_section_headliner_bottom {
+    font-size: 0.9rem;
+  }
 }
 .shipping_section_list {
   display: -webkit-box;
@@ -2354,7 +2396,18 @@ html {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  width: 620px;
+  max-width: 620px;
+  width: 85%;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .shipping_section_list {
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .shipping_section_list {
+    width: 100%;
+  }
 }
 .shipping_section_item {
   display: -webkit-box;
@@ -2381,9 +2434,21 @@ html {
   font-size: 1rem;
   line-height: 140%;
   font-weight: 500;
-  text-align: center;
   background-color: #bbb0ce;
   padding: 16px 20px;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .shipping_section_item h4 {
+    font-size: 0.9rem;
+    background-color: #ffffff;
+  }
+}
+@media (max-width: 430px) {
+  .shipping_section_item h4 {
+    font-size: clamp(0.7rem, 4.5vw, 0.8rem);
+    background-color: #ffffff;
+    padding: 16px 0;
+  }
 }
 
 .shipping_section_wrap {

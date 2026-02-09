@@ -7,17 +7,28 @@
 .shipping_section {
     @extend %padd_block;
     @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    @include media.mob_horiz{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
+    @include media.mob_vertical{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
     &_headliner_top {
-        @include mix.section_head;
         margin-bottom: 10px;
+        @include mix.section_head;
+        @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
+        @include media.mob_vertical{font-size: $font_xxl_mob;}
     }
     &_headliner_bottom {
         @include mix.product_name($size:$font_xl);
         text-align: center;
+        @include media.laptop {max-width: 60%; margin: 0 auto;}
+        @include media.tablet {max-width: 80%; margin: 0 auto;}
+        @include media.mob_horiz{font-size: clamp($font_xl_mob, 3.3vw, $font_xl);}
+        @include media.mob_vertical{font-size: $font_xl_mob;}
     }
     &_list {
         @include mix.flex($direction:column, $gap:20px);
-        width: 620px;
+        max-width: 620px;
+        width: 85%;
+        @include media.mob_horiz {width: 100%;}
+        @include media.mob_vertical {width: 100%;}
     }
     &_item {
         @include mix.flex($gap: 20px);
@@ -25,9 +36,17 @@
         h4 {
             flex:1;
             @include mix.product_name(); 
-            text-align: center;
             background-color: $accent_color;
             padding: 16px 20px;
+            @include media.mob_horiz{
+                font-size: $font_xl_mob;
+                background-color: $primary_color;
+            }
+            @include media.mob_vertical{
+                font-size: clamp($font_md, 4.5vw, $font_lg_mob);
+                background-color: $primary_color;
+                padding: 16px 0;
+            }
         }
     }
 }
