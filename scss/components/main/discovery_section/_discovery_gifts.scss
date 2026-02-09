@@ -7,22 +7,43 @@
 .discovery_section_gifts {
     @extend %padd_block;
     @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    @include media.mob_horiz{padding: $main_vertical_distance_mob 45px;}
+    @include media.mob_vertical{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
     &_headliner_top {
         @include mix.section_head;
         margin-bottom: 10px;
+        @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
+        @include media.mob_vertical{font-size: $font_xxl_mob;}
     }
     &_headliner_bottom {
         @include mix.product_name($size:$font_xl);
         text-align: center;
+        @include media.mob_horiz{font-size: clamp($font_xl_mob, 3.3vw, $font_xl);}
+        @include media.mob_vertical{font-size: $font_xl_mob;}
     }
     &_list {
-        @include mix.flex($align:baseline, $gap:20px);
+        @include mix.flex($justify: space-evenly, $align:baseline, $gap:20px);
+        @include media.tablet{flex-wrap: wrap; gap: 40px}
+        @include media.mob_horiz{flex-wrap: wrap; gap: 40px}
+        @include media.mob_vertical{flex-wrap: wrap; gap: 80px}
     }
     &_item {
-        flex: 1;
         @include mix.flex($direction:column);
-        img {height: 400px; margin-bottom: 40px;}
-        h4 {@include mix.product_name(); text-align: center; margin-bottom: 8px;}
+        flex-basis: 90%;
+        @include media.tablet{flex-basis: 35%;}
+        @include media.mob_horiz{flex-basis: 35%;}
+        img {
+            height: 400px; 
+            margin-bottom: 40px;
+            @include media.mob_horiz {margin-bottom: 20px;}
+        }
+        h4 {
+            @include mix.product_name(); 
+            text-align: center; 
+            margin-bottom: 8px;
+            @include media.mob_horiz{font-size: $font_xl_mob;}
+            @include media.mob_vertical{font-size: $font_lg_mob;}
+        }
         p {@include mix.body_font(); text-align: center;}
     }
     &_button {
