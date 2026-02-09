@@ -7,21 +7,27 @@
     @extend %no_padd_block;
     @include mix.flex();
     background: url("../../../../images/About/item3.png");
-    @extend %bg_styles;
+    @include mix.bg_styles;
 }
 
 .philosophy_content_box {
-    width: 40%;
-    max-width: calc(100% - 30px);
-    height: 80%;
     @include mix.flex($direction:column, $justify:space-between, $gap:20px);
+    min-height: 80%;
+    max-height: 90%;
+    width: 40%;
+    @include media.tablet{width: 60%;}
+    @include media.mob_horiz{width: 80%;}
+    @include media.mob_vertical{width: 90%;}
     &_headliner {
         border: 1px solid $primary_color;
         background-color: $accent_color;
         width: 100%;
         padding: 10px;
         text-align: center;
-        h3 {@include mix.product_name($color:$primary_color, $size:$font_xl)}
+        h3 {
+            @include mix.product_name($color:$primary_color, $size:$font_xl);
+            @include media.mob_vertical{font-size: $font_xl_mob;}
+        }
     }
     &_text {
         position: relative;
@@ -29,10 +35,11 @@
         border: 1px solid rgba(237, 234, 244, 0.25);
         width: 100%;
         padding: 40px;
-        @include mix.flex($direction:column, $justify:space-between);
+        @include mix.flex($direction:column, $justify:space-between, $gap: 25px);
         overflow: hidden;
+        @include media.mob_vertical{padding: 15px; gap: 15px;}
         .logo {width: 105px; height: 25px; z-index: 10;}
-        .line {z-index: 10;}
+        .line {z-index: 10; width: 80%;}
         p {
             @include mix.body_font($color:$primary_color);
             text-align: center;
