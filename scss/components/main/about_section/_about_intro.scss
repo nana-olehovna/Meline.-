@@ -4,26 +4,48 @@
 @use "../../../media/index" as media;
 
 .about_section_intro {
-    @include mix.flex($justify:space-between, $gap: 40px);
+    @include mix.flex($justify:space-between, $align: start, $gap: 3.75vw);
     @extend %padd_block;
+    @include media.laptop {justify-content: space-evenly;}
+    @include media.tablet {flex-direction: column; justify-content: center; align-items: center;}
+    @include media.mob_horiz {flex-direction: column; gap: 100px; padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
+    @include media.mob_vertical {flex-direction: column; gap: 100px; padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
+    &_headliner {@include media.laptop {max-width: 40%;}}
+    &_headliner {@include media.tablet {max-width: 60%;}}
     &_headliner_top {
         @include mix.section_head;
         text-align: start;
         margin-bottom: 20px;
+        @include media.tablet{text-align: center}
+        @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
+        @include media.mob_vertical{font-size: $font_xxl_mob;}
+
     }
     &_headliner_bottom {
         @include mix.product_name;
+        @include media.tablet{text-align: center}
+        @include media.mob_horiz{font-size: clamp($font_xl_mob, 3.3vw, $font_xl);}
+        @include media.mob_vertical{font-size: $font_xl_mob;}
     }
     &_content_list {
-        @include mix.flex($align:baseline, $gap: 20px);
+        @include mix.flex($justify:space-between, $align:baseline, $gap: 2vw);
+        @include media.tablet{width: clamp(80%, 65vw, 90%); justify-content: space-around;}
+        @include media.mob_horiz{flex-direction: column; align-items: end; gap: 60px;}
+        @include media.mob_vertical{flex-direction: column; align-items: end; gap: 60px;}
     }
     &_content_item {
-        @include mix.flex($direction:column, $gap: 28px);
+        @include mix.flex($direction:column, $align: end, $gap: 28px);
         text-align: end;
+        img {width: 100%;}
+        
+        @include media.mob_horiz {width: 100%;}
+        @include media.mob_vertical {width: 100%;}
         p {
             @include mix.body_font($color:$descript_font_color);
         }
     }
-    &_content_item1 {width: 300px;}
-    &_content_item2 {width: 220px;}
+    &_content_item1 {@include media.laptop {width: 300px;}}
+    &_content_item1 {@include media.tablet {width: 300px;}}
+    &_content_item2 {@include media.laptop {width: 220px;}}
+    &_content_item2 {@include media.tablet {width: 220px;}}
 }

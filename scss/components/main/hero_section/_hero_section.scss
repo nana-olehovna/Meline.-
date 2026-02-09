@@ -87,10 +87,11 @@
             z-index: 10;
             text-align: center;
             width: 300px;
-            border: 1px solid #edeaf425;
+            
             @include mix.section_description($size:16px, $color:$primary_color);
             @include media.mob_vertical{
                 font-size: $font_md;
+                border: 1px solid #edeaf425;
                 &::before {
                     content: '';
                     inset: 0;
@@ -102,6 +103,7 @@
                 }
             }
             @include media.mob_horiz{
+                border: 1px solid #edeaf425;
                 font-size: $font_lg_mob;
                 &::before {
                     content: '';
