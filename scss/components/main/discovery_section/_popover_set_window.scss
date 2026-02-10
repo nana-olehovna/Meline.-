@@ -7,24 +7,32 @@
     position: fixed;
     inset: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid black;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    
 }
 
 .popover_set {
+    @include mix.flex($direction:column, $gap: 10px);
     min-width: 60%;
-    max-height: 90vh;
+    // max-height: 90vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid $primary_color;
     padding: 40px;
-    @include mix.flex($direction:column, $gap: 10px);
-    h1 {@include mix.section_head($color:$primary_color); z-index: 10;}
+    @include media.mob_horiz {width: 80%; padding: 25px; top: 70%;}
+    @include media.mob_vertical {width: 90%; padding: 15px; top: 65%;}
+    h1 {
+        @include mix.section_head($color:$primary_color); 
+        z-index: 10;
+        @include media.mob_horiz{font-size: $font_xxl_h1_mob;}
+        @include media.mob_vertical{font-size: $font_xxl_h1_mob;}
+    }
 }
 
 
@@ -48,8 +56,9 @@
         background: transparent;
         border: none;
         margin: 20px;
-        
         cursor: $clicking_cursor;
+        @include media.mob_horiz { right: -50px;}
+        @include media.mob_vertical {top: -50px; right: -20px;}
     }
 }
 
@@ -62,10 +71,21 @@
     padding: 16px 20px;
     background-color: $primary_color;
     z-index: 10;
+    @include media.mob_horiz{@include mix.flex($direction: column, $align: start, $gap: 20px);}
+    @include media.mob_vertical{@include mix.flex($direction: column, $align: start, $gap: 20px);}
 }
 
 .form_radio {
     @include mix.flex($justify:start);
+    @include media.mob_horiz{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }@include media.mob_vertical{
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
     label {
         margin-left: 8px;
         @include mix.body_font;
@@ -83,20 +103,68 @@
     background-color: $primary_color;
     @include mix.flex($direction:column, $align: start, $gap: 10px);
     z-index: 10;
+    position: relative;
     &_list {
         width: 100%;
         max-width: 650px;
         margin: 0 auto;
-        @include mix.flex($justify: space-between, $gap: 10px);
+        position: relative;
+        @include mix.flex($justify: space-evenly, $gap: 10px);
+        @include media.mob_horiz {
+            flex-direction: column;
+            min-height: 170px;
+            .popover_item1 {top: 0; left:0; z-index: 20;}
+            .popover_item2 {top: 0; right:0; z-index: 20;}
+            .popover_item3 {top: 0; left:0; z-index: 15; opacity: 0;}
+            .popover_item4 {top: 0; right:0; z-index: 15; opacity: 0;}
+        }
+        @include media.mob_vertical {
+            flex-direction: column;
+            min-height: 130px;
+            .popover_item1 {top: 0; left:0; z-index: 20;}
+            .popover_item2 {top: 0; right:0; z-index: 20;}
+            .popover_item3 {top: 0; left:0; z-index: 15; opacity: 0;}
+            .popover_item4 {top: 0; right:0; z-index: 15; opacity: 0;}
+        }
     }
     &_item {
-        flex: 0 0 120px;
+        flex: 0 0 calc(25% - 30px);
+        max-height: 100%;
         @include mix.flex($direction:column, $align: center, $gap: 10px);
-        p {
-            @include mix.body_font; text-align: center; white-space: nowrap;
+        @include media.mob_horiz {
+            width: 48%;
+            position: absolute;
+            img {width: 90%}
+        }@include media.mob_vertical {
+            width: 48%;
+            position: absolute;
+            img {width: 90%}
         }
-        img {flex: 1;}
+        p {
+            @include mix.body_font; 
+            text-align: center; 
+            white-space: nowrap;
+            @include media.mob_horiz {font-size: $font_xs;}
+            @include media.mob_vertical {font-size: $font_xs;}
+        }
+        
     }
+}
+
+.popover_slider_arrow {
+    position: absolute;
+    top: -20%;
+    right: 0%;
+    cursor: $clicking_cursor;
+    @include media.laptop {display: none;}
+    @include media.tablet {display: none;}
+}
+
+@media (max-width: 768px) {
+.popover_set_middle:hover .popover_item1 {animation: vanish 4s linear 2s forwards;}
+.popover_set_middle:hover .popover_item2 {animation: vanish 4s linear 2s forwards;}
+.popover_set_middle:hover .popover_item3 {animation: vanish 4s linear 6s forwards;}
+.popover_set_middle:hover .popover_item4 {animation: vanish 4s linear 6s forwards;}
 }
 
 .products_amount {
@@ -107,7 +175,10 @@
         height: 16px;
         border: 1px solid #edeaf4;
         @include mix.flex();
-        @include mix.body_font($size:$font_sm); text-align: center; 
+        @include mix.body_font($size:$font_sm); 
+        text-align: center;
+        @include media.mob_horiz {font-size: $font_xs; margin-right: 5%;}
+        @include media.mob_vertical {font-size: $font_xs; margin-right: 5%;}
     }
     .more_less {cursor: $clicking_cursor;}
 }
@@ -139,3 +210,4 @@
 .popover_set:has(#two:checked) .two_set {display: flex;}
 .popover_set:has(#three:checked) .three_set {display: flex;}
 .popover_set:has(#four:checked) .four_set {display: flex;}
+
