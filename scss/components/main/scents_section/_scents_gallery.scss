@@ -4,11 +4,39 @@
 @use "../../../media/index" as media;
 
 .scents_section_gallery {
-    @extend %no_padd_block;
-    @include mix.flex($direction:column, $gap: 20px);
+    width: 100%;
+    max-width: 1200px;
+    // height: $no_padd_block_height;
+    margin: $main_vertical_distance 0;
+    @include mix.flex($direction:column,  $gap: 20px);
+    @include media.mob_horiz {margin: 80px 0; gap: 8px;}
+    @include media.mob_vertical {margin: 80px 0; gap: 8px;}
 }
+
 
 .scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
     width: 100%;
-    @include mix.flex($justify:space-between, $gap: 20px);
+    @include mix.flex($justify:space-evenly, $gap: 20px);
+    @include media.laptop {max-height: 280px;}
+    @include media.tablet {max-height: 220px;}
+    @include media.mob_horiz {max-height: 180px; gap: 8px;}
+    @include media.mob_vertical {max-height: 100px; gap: 8px;}
+}
+
+.scents_section_gallery_top_item {
+    overflow: hidden;
+    height: 100%;
+    img {width: 100%;}
+    .gal_top_item_1 {flex-basis: 38%;}
+    .gal_top_item_2 {flex-basis: 43%;}
+    .gal_top_item_3 {flex-basis: 22%;}
+}
+
+.scents_section_gallery_bottom_item {
+    overflow: hidden;
+    height: 100%;
+    img {width: 100%;}
+    .gal_bottom_item_1 {flex-basis: 38%;}
+    .gal_bottom_item_2 {flex-basis: 25%;}
+    .gal_bottom_item_3 {flex-basis: 40%;}
 }

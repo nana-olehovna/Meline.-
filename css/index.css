@@ -46,7 +46,7 @@ html {
   width: 100%;
 }
 
-.reviews_section_gallery, .discovery_section_gallery, .scents_section_gallery, .about_section_philosophy, .hero_section_block {
+.reviews_section_gallery, .about_section_philosophy, .hero_section_block {
   width: 100%;
   height: 560px;
   margin-bottom: 7.5vw;
@@ -1183,6 +1183,9 @@ html {
 }
 
 .scents_section_gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 7.5vw 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1198,6 +1201,18 @@ html {
           align-items: center;
   gap: 20px;
 }
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_gallery {
+    margin: 80px 0;
+    gap: 8px;
+  }
+}
+@media (max-width: 430px) {
+  .scents_section_gallery {
+    margin: 80px 0;
+    gap: 8px;
+  }
+}
 
 .scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
   width: 100%;
@@ -1208,13 +1223,75 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+@media (min-width: 1024px) {
+  .scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
+    max-height: 280px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
+    max-height: 220px;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
+    max-height: 180px;
+    gap: 8px;
+  }
+}
+@media (max-width: 430px) {
+  .scents_section_gallery_top_list, .scents_section_gallery_bottom_list {
+    max-height: 100px;
+    gap: 8px;
+  }
+}
+
+.scents_section_gallery_top_item {
+  overflow: hidden;
+  height: 100%;
+}
+.scents_section_gallery_top_item img {
+  width: 100%;
+}
+.scents_section_gallery_top_item .gal_top_item_1 {
+  -ms-flex-preferred-size: 38%;
+      flex-basis: 38%;
+}
+.scents_section_gallery_top_item .gal_top_item_2 {
+  -ms-flex-preferred-size: 43%;
+      flex-basis: 43%;
+}
+.scents_section_gallery_top_item .gal_top_item_3 {
+  -ms-flex-preferred-size: 22%;
+      flex-basis: 22%;
+}
+
+.scents_section_gallery_bottom_item {
+  overflow: hidden;
+  height: 100%;
+}
+.scents_section_gallery_bottom_item img {
+  width: 100%;
+}
+.scents_section_gallery_bottom_item .gal_bottom_item_1 {
+  -ms-flex-preferred-size: 38%;
+      flex-basis: 38%;
+}
+.scents_section_gallery_bottom_item .gal_bottom_item_2 {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+.scents_section_gallery_bottom_item .gal_bottom_item_3 {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
 }
 
 .scents_section {
@@ -1543,6 +1620,8 @@ html {
   text-align: center;
 }
 .discovery_section_gallery {
+  width: 100%;
+  max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1553,10 +1632,26 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   gap: 20px;
+  margin: 7.5vw 0;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .discovery_section_gallery {
+    margin: 80px 0;
+    gap: 8px;
+  }
+}
+@media (max-width: 430px) {
+  .discovery_section_gallery {
+    margin: 80px 0;
+    gap: 8px;
+  }
+}
+.discovery_section_gallery img {
+  width: 100%;
 }
 .discovery_section_gallery_item_wrap {
   display: -webkit-box;
@@ -1572,7 +1667,17 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 10px;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .discovery_section_gallery_item_wrap {
+    gap: 0;
+  }
+}
+@media (max-width: 430px) {
+  .discovery_section_gallery_item_wrap {
+    gap: 0;
+  }
 }
 
 .popover_set_window {
