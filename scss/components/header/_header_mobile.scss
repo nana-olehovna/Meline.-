@@ -41,6 +41,8 @@
     &_content_bottom_links {
         @include mix.flex($gap:20px);
         img {width: 16px; height: 16px; background: transparent; cursor: $clicking_cursor;}
+        .insta_icon {width: 20px; height: 16px;}
+        .envelope_icon {width: 20px; height: 16px;}
     }
     &_content_bottom_logo img{
         width: 90px;

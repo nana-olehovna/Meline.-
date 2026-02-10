@@ -1,10 +1,18 @@
+@use "../../media/index" as media;
+
 .scroll_up_wrap {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
+    bottom: 20px; right: 20px;
     opacity: 0.1;
-    img {width: 60px;height: 60px;}
+    z-index: 100;
+    img {width: 50px;height: 50px;}
     &:hover {opacity: 0.3;}
+    @include media.mob_horiz {
+        img {width: 40px;height: 40px;}
+        bottom: 20px; right: 20px;
+    }
+    @include media.mob_vertical {
+        img {width: 40px;height: 40px;}
+        bottom: 20px; right: 20px;
+    }
 }

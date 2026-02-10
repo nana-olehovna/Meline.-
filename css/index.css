@@ -179,6 +179,14 @@ html {
   background: transparent;
   cursor: pointer;
 }
+.popover_nav_menu_content_bottom_links .insta_icon {
+  width: 20px;
+  height: 16px;
+}
+.popover_nav_menu_content_bottom_links .envelope_icon {
+  width: 20px;
+  height: 16px;
+}
 .popover_nav_menu_content_bottom_logo img {
   width: 90px;
 }
@@ -3605,16 +3613,35 @@ html {
 
 .scroll_up_wrap {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
+  bottom: 20px;
+  right: 20px;
   opacity: 0.1;
+  z-index: 100;
 }
 .scroll_up_wrap img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 .scroll_up_wrap:hover {
   opacity: 0.3;
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .scroll_up_wrap {
+    bottom: 20px;
+    right: 20px;
+  }
+  .scroll_up_wrap img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 430px) {
+  .scroll_up_wrap {
+    bottom: 20px;
+    right: 20px;
+  }
+  .scroll_up_wrap img {
+    width: 40px;
+    height: 40px;
+  }
 }
