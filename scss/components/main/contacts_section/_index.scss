@@ -4,7 +4,10 @@
 @use "../../../mixins/index" as mix;
 @use "../../../placeholders/index" as place;
 
-#contacts {@extend %section_size_prop;}
+#contacts {
+    @extend %section_size_prop;
+    &:target {animation: showup 3s ease 1s;}
+}
 .contacts_section_wrap {
     @include mix.flex($direction:column);
 }

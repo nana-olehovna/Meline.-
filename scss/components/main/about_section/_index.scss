@@ -14,7 +14,7 @@
 
 #about {
     @extend %section_size_prop;
-    animation: showup 3s ease;
+    &:target {animation: showup 3s ease;}
 }
 .about_section {
     @include mix.flex($direction:column);

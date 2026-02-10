@@ -1020,7 +1020,7 @@ html {
     opacity: 1;
   }
 }
-#about {
+#about:target {
   -webkit-animation: showup 3s ease;
           animation: showup 3s ease;
 }
@@ -1314,6 +1314,11 @@ html {
 .scents_section_gallery_bottom_item .gal_bottom_item_3 {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
+}
+
+#scents:target {
+  -webkit-animation: showup 3s ease;
+          animation: showup 3s ease;
 }
 
 .scents_section {
@@ -2267,6 +2272,11 @@ html {
   display: flex;
 }
 
+#set:target {
+  -webkit-animation: showup 3s ease 0.4s;
+          animation: showup 3s ease 0.4s;
+}
+
 .discovery_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2413,6 +2423,11 @@ html {
 
 .moment_item4 {
   grid-area: 2/2/3/3;
+}
+
+#usage:target {
+  -webkit-animation: showup 3s ease 0.6s;
+          animation: showup 3s ease 0.6s;
 }
 
 .usage_section {
@@ -2745,6 +2760,11 @@ html {
   }
 }
 
+#reviews:target {
+  -webkit-animation: showup 3s ease 0.8s;
+          animation: showup 3s ease 0.8s;
+}
+
 .discovery_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2902,6 +2922,11 @@ html {
     background-color: #ffffff;
     padding: 16px 0;
   }
+}
+
+#shipping:target {
+  -webkit-animation: showup 3s ease 0.9s;
+          animation: showup 3s ease 0.9s;
 }
 
 .shipping_section_wrap {
@@ -3147,6 +3172,11 @@ html {
 }
 .contacts_section_info_map iframe {
   width: 100%;
+}
+
+#contacts:target {
+  -webkit-animation: showup 3s ease 1s;
+          animation: showup 3s ease 1s;
 }
 
 .contacts_section_wrap {

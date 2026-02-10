@@ -4,7 +4,10 @@
 @use "../../../mixins/index" as mix;
 @use "../../../placeholders/index" as place;
 
-#shipping {@extend %section_size_prop;}
+#shipping {
+    @extend %section_size_prop;
+    &:target {animation: showup 3s ease 0.9s;}
+}
 .shipping_section_wrap {
     @include mix.flex($direction:column);
 }

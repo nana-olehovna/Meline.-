@@ -7,7 +7,10 @@
 @use "../../../placeholders/index" as place;
 
 
-#reviews {@extend %section_size_prop;}
+#reviews {
+    @extend %section_size_prop;
+    &:target {animation: showup 3s ease 0.8s;}
+}
 .discovery_section {
     @include mix.flex($direction:column);
 }

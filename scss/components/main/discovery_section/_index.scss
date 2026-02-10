@@ -8,7 +8,10 @@
 @use "../../../placeholders/index" as place;
 
 
-#set {@extend %section_size_prop;}
+#set {
+    @extend %section_size_prop;
+    &:target {animation: showup 3s ease 0.4s;}
+}
 .discovery_section {
     @include mix.flex($direction:column);
 }
