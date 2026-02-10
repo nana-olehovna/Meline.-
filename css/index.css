@@ -58,13 +58,6 @@ html {
   padding: 7.5vw 10.8vw;
 }
 
-.reviews_section_gallery {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
 .footer_links_item a, .header_nav_item a {
   font-family: "Raleway";
   font-size: 0.6rem;
@@ -2101,6 +2094,7 @@ html {
 }
 
 .reviews_section {
+  min-height: 560px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2115,7 +2109,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
   gap: 80px;
-  min-height: 560px;
 }
 .reviews_section_headliner_top {
   font-size: 2.4rem;
@@ -2123,15 +2116,17 @@ html {
   font-weight: 500;
   color: #4d4a99;
 }
-.reviews_section_content {
-  width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-height: 140px;
+@media (min-width: 430px) and (max-width: 768px) {
+  .reviews_section_headliner_top {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+}
+@media (max-width: 430px) {
+  .reviews_section_headliner_top {
+    font-size: 1.2rem;
+  }
 }
 .reviews_section_list {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2146,7 +2141,39 @@ html {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  width: 100%;
+  min-height: 200px;
   position: relative;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .reviews_section_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    min-height: 300px;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .reviews_section_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    min-height: 330px;
+  }
+}
+@media (max-width: 430px) {
+  .reviews_section_list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    min-height: 520px;
+  }
 }
 .reviews_section_item {
   display: -webkit-box;
@@ -2166,7 +2193,25 @@ html {
   width: calc(50% - 20px);
   opacity: 1;
   position: absolute;
-  height: 140px;
+  height: 160px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .reviews_section_item {
+    width: 100%;
+    height: 140px;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .reviews_section_item {
+    width: 100%;
+    height: 150px;
+  }
+}
+@media (max-width: 430px) {
+  .reviews_section_item {
+    width: 100%;
+    height: 250px;
+  }
 }
 .reviews_section_item img {
   width: 60px;
@@ -2175,7 +2220,10 @@ html {
 .reviews_section_item_info {
   height: 100%;
   background-color: #bbb0ce;
-  padding: 10px 20px;
+  padding: 16px 20px;
+}
+.reviews_section_item_info media.mob_vertical {
+  padding: 8px 10px;
 }
 .reviews_section_item_info .comment_name {
   color: #4d4a99;
@@ -2184,67 +2232,97 @@ html {
   font-weight: 500;
   margin-bottom: 10px;
 }
+@media (min-width: 430px) and (max-width: 768px) {
+  .reviews_section_item_info .comment_name {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 430px) {
+  .reviews_section_item_info .comment_name {
+    font-size: 0.8rem;
+  }
+}
 .reviews_section_item_info .comment_text {
   color: #4d4a99;
   font-size: 0.7rem;
   font-family: "Raleway";
   line-height: 140%;
 }
+@media (min-width: 430px) and (max-width: 768px) {
+  .reviews_section_item_info .comment_text {
+    font-size: clamp(0.6rem, 2.5vw, 0.7rem);
+  }
+}
+@media (max-width: 430px) {
+  .reviews_section_item_info .comment_text {
+    font-size: clamp(0.6rem, 4vw, 0.8rem);
+  }
+}
 
-.reviews_section_content:hover .comment1 {
+.reviews_section:hover .comment1 {
   -webkit-animation: vanish 4s linear 2s forwards;
           animation: vanish 4s linear 2s forwards;
-}
-
-.reviews_section_content:hover .comment2 {
-  -webkit-animation: vanish 4s linear 2s forwards;
-          animation: vanish 4s linear 2s forwards;
-}
-
-.reviews_section_content:hover .comment3 {
-  -webkit-animation: vanish 4s linear 8s forwards;
-          animation: vanish 4s linear 8s forwards;
-}
-
-.reviews_section_content:hover .comment4 {
-  -webkit-animation: vanish 4s linear 8s forwards;
-          animation: vanish 4s linear 8s forwards;
-}
-
-.comment1 {
-  top: 0;
-  left: 0;
   z-index: 10;
 }
 
-.comment2 {
-  top: 0;
-  right: 0;
+.reviews_section:hover .comment2 {
+  -webkit-animation: vanish 4s linear 2s forwards;
+          animation: vanish 4s linear 2s forwards;
   z-index: 10;
 }
 
-.comment3 {
-  top: 0;
-  left: 0;
+.reviews_section:hover .comment3 {
+  -webkit-animation: vanish 4s linear 8s forwards;
+          animation: vanish 4s linear 8s forwards;
   z-index: 5;
 }
 
-.comment4 {
-  top: 0;
-  right: 0;
+.reviews_section:hover .comment4 {
+  -webkit-animation: vanish 4s linear 8s forwards;
+          animation: vanish 4s linear 8s forwards;
   z-index: 5;
 }
 
-.comment5 {
-  top: 0;
-  left: 0;
+.comment1, .comment2 {
+  z-index: 10;
+}
+
+.comment3, .comment4 {
+  z-index: 5;
+}
+
+.comment5, .comment6 {
   z-index: 1;
 }
 
-.comment6 {
+.comment1, .comment3, .comment5 {
   top: 0;
-  right: 0;
-  z-index: 1;
+  left: 0;
+}
+
+@media (min-width: 1024px) {
+  .comment2, .comment4, .comment6 {
+    top: 0;
+    right: 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .comment2, .comment4, .comment6 {
+    bottom: 0;
+    left: 0;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .comment2, .comment4, .comment6 {
+    bottom: 0;
+    left: 0;
+  }
+}
+@media (max-width: 430px) {
+  .comment2, .comment4, .comment6 {
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .slider_arrows {
@@ -2290,6 +2368,25 @@ html {
 }
 .reviews_section_gallery {
   background: url("../../../../images/Gallery3/1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .reviews_section_gallery {
+    max-height: 500px;
+  }
+}
+@media (min-width: 430px) and (max-width: 768px) {
+  .reviews_section_gallery {
+    max-height: 350px;
+  }
+}
+@media (max-width: 430px) {
+  .reviews_section_gallery {
+    max-height: 200px;
+  }
 }
 
 .discovery_section {
