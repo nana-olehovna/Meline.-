@@ -1003,6 +1003,28 @@ html {
   }
 }
 
+@-webkit-keyframes showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#about {
+  -webkit-animation: showup 3s ease;
+          animation: showup 3s ease;
+}
+
 .about_section {
   display: -webkit-box;
   display: -ms-flexbox;

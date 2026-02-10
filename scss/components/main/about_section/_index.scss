@@ -7,10 +7,15 @@
 @use "../../../base/index" as *;
 @use "../../../mixins/index" as mix;
 @use "../../../placeholders/index" as place;
+@use "../../../animations/index" as *;
 
 
 
-#about {@extend %section_size_prop;}
+
+#about {
+    @extend %section_size_prop;
+    animation: showup 3s ease;
+}
 .about_section {
     @include mix.flex($direction:column);
 }
