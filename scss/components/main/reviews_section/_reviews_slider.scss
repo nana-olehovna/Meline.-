@@ -11,6 +11,8 @@
     @extend %padd_block;
     min-height: 560px;
     @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    @include media.mob_horiz{padding: 80px 45px;}
+    @include media.mob_vertical{padding: 80px 35px;}
     &_headliner_top {
         @include mix.section_head;
         @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
@@ -21,7 +23,7 @@
         width: 100%;
         min-height: 200px;
         position: relative;
-        @include media.tablet {flex-direction: column; width: 80%; min-height: 300px;}
+        @include media.tablet {flex-direction: column; width: 80%; min-height: 320px;}
         @include media.mob_horiz {flex-direction: column; width: 100%; min-height: 330px;}
         @include media.mob_vertical {flex-direction: column; width: 100%; min-height: 520px;}
     }
@@ -31,7 +33,7 @@
         opacity: 1;
         position: absolute;
         height: 160px;
-        @include media.tablet {width: 100%; height: 140px;}
+        @include media.tablet {width: 100%; height: 150px;}
         @include media.mob_horiz {width: 100%; height: 150px;}
         @include media.mob_vertical {width: 100%; height: 250px;}
         img {width: 60px; height: 60px;}

@@ -23,9 +23,9 @@
     }
     &_content_list {
         @include mix.flex($justify: space-evenly, $align:baseline, $gap:$pad_sm);
-        @include media.tablet{flex-wrap: wrap; gap: $pad_lg}
-        @include media.mob_horiz{flex-wrap: wrap; gap:$pad_lg}
-        @include media.mob_vertical{flex-wrap: wrap; gap: $pad_2xl}
+        @include media.tablet{flex-wrap: wrap; gap: $pad_lg;}
+        @include media.mob_horiz{flex-wrap: wrap; gap:$pad_lg;}
+        @include media.mob_vertical{flex-wrap: wrap; gap: $pad_2xl;}
     }
     &_content_item {
         @include mix.flex($direction:column);
