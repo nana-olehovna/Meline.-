@@ -15,22 +15,9 @@
     &:active {background-color: $primary_color; color: $secondary_color; border: 1px solid $accent_color;}
 }
 
-%button_styles_mob{
-    width: 300px;
-    height: 60px;
-    border: none;
-    background-color: $secondary_color;
-    color: $primary_color;
-    font-size: $font_lg_mob;
-    letter-spacing: $letter_spac;
-    font-family: $titles_font;
-    text-transform: uppercase;
-    cursor: $clicking_cursor;
-}
 
 %section_size_prop {
     width: 100%;
-    
 }
 
 %no_padd_block {
@@ -40,23 +27,10 @@
     margin-top: $main_vertical_distance;
 }
 
-%no_padd_block_mob {
-    width: 100%;
-    max-height: $no_padd_block_height;
-    margin-bottom: $main_vertical_distance_mob;
-    margin-top: $main_vertical_distance_mob;
-}
 
 %padd_block {
     width: 100%;
     padding: $main_vertical_distance $main_horiz_distance;
-}
-
-%bg_styles {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
 }
 
 

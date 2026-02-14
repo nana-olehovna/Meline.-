@@ -16,15 +16,15 @@
 }
 
 .popover_set {
-    @include mix.flex($direction:column, $gap: 10px);
+    @include mix.flex($direction:column, $gap: $pad_xs);
     min-width: 60%;
     // max-height: 90vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid $primary_color;
-    padding: 40px;
+    border: 1px solid rgba($border_color, 0.25);
+    padding: $pad_lg;
     @include media.mob_horiz {width: 80%; padding: 25px; top: 70%;}
     @include media.mob_vertical {width: 90%; padding: 15px; top: 65%;}
     h1 {
@@ -80,11 +80,11 @@
     @include media.mob_horiz{
         flex-direction: column;
         align-items: start;
-        gap: 20px;
+        gap: $pad_sm;
     }@include media.mob_vertical{
         flex-direction: column;
         align-items: start;
-        gap: 20px;
+        gap: $pad_sm;
     }
     label {
         margin-left: 8px;
@@ -101,7 +101,7 @@
     width: 100%;
     padding: 16px 20px;
     background-color: $primary_color;
-    @include mix.flex($direction:column, $align: start, $gap: 10px);
+    @include mix.flex($direction:column, $align: start, $gap: $pad_xs);
     z-index: 10;
     position: relative;
     &_list {
@@ -109,7 +109,7 @@
         max-width: 650px;
         margin: 0 auto;
         position: relative;
-        @include mix.flex($justify: space-evenly, $gap: 10px);
+        @include mix.flex($justify: space-evenly, $gap: $pad_xs);
         @include media.mob_horiz {
             flex-direction: column;
             min-height: 170px;
@@ -193,9 +193,9 @@
 }
 
 .popover_set_bottom {
-    @include mix.flex($align: baseline, $gap: 40px);
+    @include mix.flex($align: baseline, $gap: $pad_lg);
     h3 {@include mix.product_name;}
-    h4 {@include mix.body_font; margin-bottom: 10px;}
+    h4 {@include mix.body_font; margin-bottom: $pad_xs;}
     p {@include mix.body_font($size:$font_sm);}
 }
 

@@ -46,7 +46,7 @@
 
 .footer_links_list {
     @include mix.flex($justify:space-between);
-    margin-bottom: 60px;
+    margin-bottom: $pad_xl;
     @include media.mob_horiz {@include mix.flex($align: start, $gap: 25px);}
     @include media.mob_vertical {@include mix.flex($direction: column, $align: start, $gap: 25px);}
 }
@@ -60,14 +60,14 @@
 
 .footer_blocks_list {
     @include mix.flex($justify:space-between);
-    margin-bottom: 60px;
+    margin-bottom: $pad_xl;
     @include media.mob_horiz {
-        margin-bottom: 40px;
-        @include mix.flex($direction: column, $align: center, $gap: 40px);
+        margin-bottom: $pad_lg;
+        @include mix.flex($direction: column, $align: center, $gap: $pad_lg);
     }
     @include media.mob_vertical {
-        margin-bottom: 40px;
-        @include mix.flex($direction: column, $align: start, $gap: 40px);
+        margin-bottom: $pad_lg;
+        @include mix.flex($direction: column, $align: start, $gap: $pad_lg);
     }
 }
 .footer_blocks_item {flex: 1;}
@@ -77,12 +77,12 @@
     @include mix.flex($direction: column, $align:start, $gap: 10px);
     &_label {@include mix.body_font($color:$primary_color); white-space: nowrap; font-weight: 300;}
     &_input_wrap {
-        height: 40px;
+        height: $pad_lg;
         background-color: $primary_color;
         @include mix.flex($justify: space-between);
         
         p {
-            margin-left: 20px;
+            margin-left: $pad_sm;
             @include mix.body_font($size:$font_sm);
             @include media.tablet {margin: 5px;}
         }
@@ -91,7 +91,7 @@
             border: none;
             min-width: 0;
             flex: 1;
-            padding: 10px;
+            padding: $pad_xs;
             @include mix.body_font($size:$font_sm);
             @include media.tablet {padding: 5px 2px;}
         }
@@ -106,7 +106,7 @@
 
 .footer_bottom_links {
     height: 100%;
-    padding-top: 20px;
+    padding-top: $pad_sm;
     @include mix.flex($direction:column, $gap: 15px);
     @include media.mob_horiz {padding: 0; width: 100%; text-align: center;}
     @include media.mob_vertical {padding: 0; width: 100%; text-align: center;}

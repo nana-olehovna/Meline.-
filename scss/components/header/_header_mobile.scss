@@ -32,14 +32,14 @@
         min-width: 240px;
         background-color: $accent_color;
         @include mix.flex($direction:column, $justify:space-between);
-        padding: 40px 20px;
+        padding: $pad_lg $pad_sm;
     }
     &_content_bottom {
         width: 100%;
-        @include mix.flex($direction:column, $justify:space-evenly, $gap:20px);
+        @include mix.flex($direction:column, $justify:space-evenly, $gap:$pad_sm);
     }
     &_content_bottom_links {
-        @include mix.flex($gap:20px);
+        @include mix.flex($gap:$pad_sm);
         img {width: 16px; height: 16px; background: transparent; cursor: $clicking_cursor;}
         .insta_icon {width: 20px; height: 16px;}
         .envelope_icon {width: 20px; height: 16px;}
@@ -50,7 +50,7 @@
     &_close_button {
         background: transparent;
         border: none;
-        margin: 20px;
+        margin: $pad_sm;
         cursor: $clicking_cursor;
         img{width: 13px; height: 13px;}
     }
@@ -60,7 +60,7 @@
     min-width: 185px;
     height: 60%;
     @include mix.flex($direction:column, $justify:space-evenly, $align:start);
-    padding: 0 10px;
+    padding: 0 $pad_xs;
 }
 
 .header_nav_item_mob a {

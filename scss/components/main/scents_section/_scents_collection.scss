@@ -5,11 +5,11 @@
 
 .scents_section_collection {
     @extend %padd_block;
-    @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    @include mix.flex($direction:column, $gap:$pad_2xl, $justify:space-between);
     @include media.mob_horiz{padding: $main_vertical_distance_mob 45px;}
     @include media.mob_vertical{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
     &_headliner_top {
-        margin-bottom: 10px;
+        margin-bottom: $pad_xs;
         @include mix.section_head;
         @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
         @include media.mob_vertical{font-size: $font_xxl_mob;}
@@ -22,10 +22,10 @@
         @include media.mob_vertical{font-size: $font_xl_mob;}
     }
     &_content_list {
-        @include mix.flex($justify: space-evenly, $align:baseline, $gap:20px);
-        @include media.tablet{flex-wrap: wrap; gap: 40px}
-        @include media.mob_horiz{flex-wrap: wrap; gap: 40px}
-        @include media.mob_vertical{flex-wrap: wrap; gap: 80px}
+        @include mix.flex($justify: space-evenly, $align:baseline, $gap:$pad_sm);
+        @include media.tablet{flex-wrap: wrap; gap: $pad_lg}
+        @include media.mob_horiz{flex-wrap: wrap; gap:$pad_lg}
+        @include media.mob_vertical{flex-wrap: wrap; gap: $pad_2xl}
     }
     &_content_item {
         @include mix.flex($direction:column);
@@ -34,8 +34,8 @@
         @include media.mob_horiz{flex-basis: 35%;}
         img {
             height: 400px; 
-            margin-bottom: 40px;
-            @include media.mob_horiz {margin-bottom: 20px;}
+            margin-bottom: $pad_lg;
+            @include media.mob_horiz {margin-bottom: $pad_sm;}
             }
         h4 {
             @include mix.product_name(); 

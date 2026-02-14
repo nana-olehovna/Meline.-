@@ -6,11 +6,11 @@
 
 .discovery_section_set {
     @extend %padd_block;
-    @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    @include mix.flex($direction:column, $gap: $pad_2xl, $justify:space-between);
     @include media.mob_vertical{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
     &_headliner_top {
         @include mix.section_head;
-        margin-bottom: 10px;
+        margin-bottom: $pad_xs;
         @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
         @include media.mob_vertical{font-size: $font_xxl_mob;}
     }
@@ -23,7 +23,7 @@
         @include media.mob_vertical{font-size: $font_xl_mob;}
     }
     &_list {
-        @include mix.flex($direction:column, $gap:40px);
+        @include mix.flex($direction:column, $gap:$pad_lg);
         @include media.tablet {
             width: 100%;
         }
@@ -33,7 +33,7 @@
             @include mix.product_name($color:$primary_color);
             padding: 6px 10px;
             background-color: $accent_color;
-            margin-bottom: 20px;
+            margin-bottom: $pad_sm;
             display: inline-block;
             white-space: nowrap;
             @include media.mob_horiz{font-size: $font_xl_mob;}
@@ -49,7 +49,7 @@
 }
 
 .discovery_section_set_item_bottom_wrap {
-    @include mix.flex($justify:space-between, $align:start, $gap:20px);
+    @include mix.flex($justify:space-between, $align:start, $gap:$pad_sm);
     img {width: 100%;}
 }
 

@@ -14,7 +14,7 @@
     @include media.mob_vertical{justify-content: start;}
     &_nav_list {
         width: 80%;
-        @include mix.flex($justify:space-evenly, $gap:10px);
+        @include mix.flex($justify:space-evenly, $gap:$pad_xs);
         @include media.tablet {width: 100%;}
         @include media.mob_horiz{display: none;}
         @include media.mob_vertical{display: none;}

@@ -29,9 +29,9 @@
         @include mix.bg_styles;
     }
     &_content {
-        @include mix.flex($direction:column, $gap: 30px);
-        @include media.mob_vertical{gap: 60px;}
-        @include media.mob_horiz{gap: 60px;}
+        @include mix.flex($direction:column, $gap: $pad_md);
+        @include media.mob_vertical{gap: $pad_xl;}
+        @include media.mob_horiz{gap: $pad_xl;}
     }
     &_content_top {
         position: relative;

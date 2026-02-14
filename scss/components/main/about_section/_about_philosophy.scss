@@ -11,7 +11,7 @@
 }
 
 .philosophy_content_box {
-    @include mix.flex($direction:column, $justify:space-between, $gap:20px);
+    @include mix.flex($direction:column, $justify:space-between, $gap:$pad_sm);
     min-height: 80%;
     max-height: 90%;
     width: 40%;
@@ -22,7 +22,7 @@
         border: 1px solid $primary_color;
         background-color: $accent_color;
         width: 100%;
-        padding: 10px;
+        padding: $pad_xs;
         text-align: center;
         h3 {
             @include mix.product_name($color:$primary_color, $size:$font_xl);
@@ -32,9 +32,9 @@
     &_text {
         position: relative;
         flex: 1;
-        border: 1px solid rgba(237, 234, 244, 0.25);
+        border: 1px solid rgba($glass_bg, 0.25);
         width: 100%;
-        padding: 40px;
+        padding: $pad_lg;
         @include mix.flex($direction:column, $justify:space-between, $gap: 25px);
         overflow: hidden;
         @include media.mob_vertical{padding: 15px; gap: 15px;}

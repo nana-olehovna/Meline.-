@@ -6,13 +6,13 @@
 .discovery_section_gallery {
     width: 100%;
     max-width: 1200px;
-    @include mix.flex($justify:space-between, $align: stretch, $gap: 20px);
+    @include mix.flex($justify:space-between, $align: stretch, $gap: $pad_sm);
     margin: $main_vertical_distance 0;
-    @include media.mob_horiz {margin: 80px 0; gap: 8px;}
-    @include media.mob_vertical {margin: 80px 0; gap: 8px;}
+    @include media.mob_horiz {margin: $pad_2xl 0; gap: 8px;}
+    @include media.mob_vertical {margin: $pad_2xl 0; gap: 8px;}
     img {width: 100%;}
     &_item_wrap {
-        @include mix.flex($direction:column, $justify:space-between, $gap: 10px);
+        @include mix.flex($direction:column, $justify:space-between, $gap: $pad_xs);
         @include media.mob_horiz {gap: 0;}
         @include media.mob_vertical {gap: 0;}
     }

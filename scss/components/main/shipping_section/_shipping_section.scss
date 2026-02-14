@@ -6,11 +6,11 @@
 
 .shipping_section {
     @extend %padd_block;
-    @include mix.flex($direction:column, $gap: 80px, $justify:space-between);
+    @include mix.flex($direction:column, $gap: $pad_2xl, $justify:space-between);
     @include media.mob_horiz{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
     @include media.mob_vertical{padding: $main_vertical_distance_mob $main_horiz_distance_mob;}
     &_headliner_top {
-        margin-bottom: 10px;
+        margin-bottom: $pad_xs;
         @include mix.section_head;
         @include media.mob_horiz{font-size: clamp($font_xxl_mob, 5vw, 1.8rem);}
         @include media.mob_vertical{font-size: $font_xxl_mob;}
@@ -24,14 +24,14 @@
         @include media.mob_vertical{font-size: $font_xl_mob;}
     }
     &_list {
-        @include mix.flex($direction:column, $gap:20px);
+        @include mix.flex($direction:column, $gap:$pad_sm);
         max-width: 620px;
         width: 85%;
         @include media.mob_horiz {width: 100%;}
         @include media.mob_vertical {width: 100%;}
     }
     &_item {
-        @include mix.flex($gap: 20px);
+        @include mix.flex($gap: $pad_sm);
         width: 100%;
         h4 {
             flex:1;
