@@ -6,7 +6,7 @@
 .about_section_philosophy {
     @extend %no_padd_block;
     @include mix.flex();
-    background: url("../../../../images/About/item3.png");
+    background: url("../images/About/item3.png");
     @include mix.bg_styles;
 }
 

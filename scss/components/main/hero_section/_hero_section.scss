@@ -12,20 +12,20 @@
     @extend %no_padd_block;
     margin-top: 0;
     @include mix.flex($direction:column);
-    background: url("../../../../images/Hero/hero.png");
+    background: url("../images/Hero/hero.png");
     @include mix.bg_styles;
     @include media.mob_vertical {
         @include mix.no_padd_block_mob;
         margin-top: 0;
         padding: 15vw 11.5vw;
-        background: url("../../../../images/Hero/hero_mob.png");
+        background: url("../images/Hero/hero_mob.png");
         @include mix.bg_styles;
     }
     @include media.mob_horiz {
         @include mix.no_padd_block_mob;
         margin-top: 0;
         padding: 15vw 11.5vw;
-        background: url("../../../../images/Hero/hero_mob.png");
+        background: url("../images/Hero/hero_mob.png");
         @include mix.bg_styles;
     }
     &_content {

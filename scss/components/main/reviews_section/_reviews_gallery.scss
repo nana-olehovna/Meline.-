@@ -6,7 +6,7 @@
 
 .reviews_section_gallery {
     @extend %no_padd_block;
-    background: url("../../../../images/Gallery3/1.png");
+    background: url("../images/Gallery3/1.png");
     @include mix.bg_styles;
     @include media.tablet {max-height: 500px;}
     @include media.mob_horiz {max-height: 350px;}
