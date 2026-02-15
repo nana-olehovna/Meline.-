@@ -344,7 +344,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 0px;
-  background: url("../../../../images/Hero/hero.png");
+  background: url("../images/Hero/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -358,7 +358,7 @@ body {
     margin-top: 80px;
     margin-top: 0;
     padding: 15vw 11.5vw;
-    background: url("../../../../images/Hero/hero_mob.png");
+    background: url("../images/Hero/hero_mob.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -373,7 +373,7 @@ body {
     margin-top: 80px;
     margin-top: 0;
     padding: 15vw 11.5vw;
-    background: url("../../../../images/Hero/hero_mob.png");
+    background: url("../images/Hero/hero_mob.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -756,7 +756,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 0px;
-  background: url("../../../../images/About/item3.png");
+  background: url("../images/About/item3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2761,7 +2761,7 @@ body {
 }
 
 .reviews_section_gallery {
-  background: url("../../../../images/Gallery3/1.png");
+  background: url("../images/Gallery3/1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
